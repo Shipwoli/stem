@@ -1,45 +1,72 @@
-/* HomePage.css */
-.home-container {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .home-container h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .home-container p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-top: 1rem;
-  }
-  
-  .cta-buttons {
-    margin-top: 2rem;
-  }
-  
-  .cta-buttons .cta-primary,
-  .cta-buttons .cta-secondary {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    margin: 0 0.5rem;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .cta-buttons .cta-primary {
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-  }
-  
-  .cta-buttons .cta-secondary {
-    background-color: #6c757d;
-    color: #fff;
-    border-radius: 5px;
-  }
-  body{
-    background-color: rgb(210, 210, 194);
-    /* background-image: url('https://images.pexels.com/photos/941555/pexels-photo-941555.jpeg?auto=compress&cs=tinysrgb&w=600'); */
-  }
+/* Home.css */
+.home {
+  padding: 0;
+}
+
+.welcome-section {
+  background: url('lego.jpg') no-repeat center center/cover;
+  height: 150vh; /* Full viewport height */
+  display: flex;
+  background-size:cover; 
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: red;
+}
+
+.welcome-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: yellow;
+}
+
+.services-section {
+  padding: 4rem 0;
+}
+
+.service-card {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.video-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.video-section video {
+  border-radius: 8px;
+}
+
+.robots-section {
+  padding: 4rem 0;
+}
+
+.robot-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.robot-card:hover {
+  transform: scale(1.05);
+}
+
+.robots-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.robots-section p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
