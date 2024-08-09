@@ -1,36 +1,46 @@
-/* Header.css */
-.navbar {
+.nav-link {
+    color: #555;
+    transition: color 0.3s ease;
+    width: 100%;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: #007bff;
+  }
+  
+  .dropdown-menu {
+    background-color: #f8f9fa;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #e9ecef;
+  }
+  .flag-selector {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 1rem;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+ 
   }
   
-  .navbar-logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
+  .flag-selector img {
+    margin-right: 5px;
   }
   
-  .navbar-links {
-    list-style: none;
+  .flag-dropdown {
+    min-width: 160px;
+  }
+  
+  .flag-dropdown .dropdown-item {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    padding: 10px;
   }
   
-  .navbar-links li {
-    margin: 0;
+  .flag-dropdown .dropdown-item:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
   }
-  
-  .navbar-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  .active-link {
-    border-bottom: 2px solid #fff;
-  }
-  
+    
