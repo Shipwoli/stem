@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import first from'./assets/first.png';
 import './HomePage.css';
+import ins from './assets/ins.jpg';
+import video from './assets/video.mp4';
 
 const HomePage = () => {
   return (
@@ -19,7 +22,7 @@ const HomePage = () => {
         <Row>
           <Col md={3}>
             <Card className="service-card" onClick={() => window.location.href = '#/robotics-tournaments'}>
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
+            <Card.Img variant="top" src={first} />
               <Card.Body>
                 <Card.Title>Robotics Tournaments</Card.Title>
                 <Card.Text>
@@ -30,7 +33,8 @@ const HomePage = () => {
           </Col>
           <Col md={3}>
             <Card className="service-card" onClick={() => window.location.href = '#/in-school-robotics'}>
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
+              {/* <Card.Img variant="top" src="https://via.placeholder.com/150" /> */}
+              <Card.Img variant="top" src={ins} />
               <Card.Body>
                 <Card.Title>In School Robotics</Card.Title>
                 <Card.Text>
@@ -68,7 +72,8 @@ const HomePage = () => {
       <Container className="video-section my-5 text-center">
         <h2>Past Robotics Events</h2>
         <video width="80%" controls>
-          <source src="https://youtu.be/RKgyaGQUqsE?si=qAcxQP2RMZ2h1gTY" type="video/mp4" />
+        <video src={video} autoPlay="true" />
+
           Your browser does not support the video tag.
         </video>
         <div className="my-4">
@@ -83,7 +88,7 @@ const HomePage = () => {
         <Row>
           <Col md={4}>
             <Card className="robot-card">
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
+              <Card.Img variant="top" src="https://ibb.co/nkN8qLG/150" />
               <Card.Body>
                 <Card.Title>Spike Essential</Card.Title>
                 <Card.Text>Engage young minds with hands-on learning through Spike Essential.</Card.Text>
