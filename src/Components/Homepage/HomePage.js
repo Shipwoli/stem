@@ -4,6 +4,10 @@ import first from'./assets/first.png';
 import './HomePage.css';
 import ins from './assets/ins.jpg';
 import video from './assets/video.mp4';
+import spike from './assets/spike.jpg';
+import wedo from './assets/wedo.jpg';
+import ev from './assets/ev.jpg';
+
 
 const HomePage = () => {
   return (
@@ -72,8 +76,7 @@ const HomePage = () => {
       <Container className="video-section my-5 text-center">
         <h2>Past Robotics Events</h2>
         <video width="80%" controls>
-        <video src={video} autoPlay="true" />
-
+        <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="my-4">
@@ -88,7 +91,7 @@ const HomePage = () => {
         <Row>
           <Col md={4}>
             <Card className="robot-card">
-              <Card.Img variant="top" src="https://ibb.co/nkN8qLG/150" />
+            <Card.Img variant="top" src={spike} />
               <Card.Body>
                 <Card.Title>Spike Essential</Card.Title>
                 <Card.Text>Engage young minds with hands-on learning through Spike Essential.</Card.Text>
@@ -98,7 +101,7 @@ const HomePage = () => {
           </Col>
           <Col md={4}>
             <Card className="robot-card">
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
+            <Card.Img variant="top" src={wedo} />
               <Card.Body>
                 <Card.Title>WeDo 2.0</Card.Title>
                 <Card.Text>Simple, engaging, and effective learning with WeDo 2.0.</Card.Text>
@@ -108,7 +111,7 @@ const HomePage = () => {
           </Col>
           <Col md={4}>
             <Card className="robot-card">
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
+            <Card.Img variant="top" src={ev} />
               <Card.Body>
                 <Card.Title>More Robots</Card.Title>
                 <Card.Text>Explore more educational robots that foster innovation.</Card.Text>
