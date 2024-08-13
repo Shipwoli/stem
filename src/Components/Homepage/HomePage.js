@@ -1,15 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-// import first from'./assets/first.png';
 import inspire from './assets/inspire.jpeg';
 import './HomePage.css';
 import ins from './assets/ins.jpg';
-import video from './assets/video.mp4';
+
 import spike from './assets/spike.jpg';
 import wedo from './assets/wedo.jpg';
 import ev from './assets/ev.jpg';
-import inov from './assets/inov.jpg';
-
+import inov from './assets/ino.jpg';
+import lab from './assets/lab.jpg';
 
 const HomePage = () => {
   return (
@@ -21,156 +20,69 @@ const HomePage = () => {
           <p>Empowering the next generation through robotics and innovation.</p>
         </Container>
       </div>
-
-
-      {/* Programs Section */}
-<Container className="programs-section my-5">
-  <h2 className="text-center mb-4">Our Programs</h2>
-  <Row>
-    <Col md={4}>
-      <Card className="program-card">
-        <Card.Body>
-          <Card.Title>LEGO Robotics</Card.Title>
-          <Card.Text>
-    Robot Design, Coding, and Robotics tournaments
-          </Card.Text>
-        </Card.Body>
-      </Card>
+ {/* Services Section */}
+<Container className="services-section">
+  <h2 className="text-center my-4">Our Services</h2>
+  <Row className="align-items-center my-5">
+    <Col md={6}>
+      <Card.Img src={inspire} className="img-fluid" />
     </Col>
-    <Col md={4}>
-      <Card className="program-card">
-        <Card.Body>
-          <Card.Title>LEGO Robotics Junior</Card.Title>
-          <Card.Text>
-            Perfect for younger learners to start their journey in robotics and engineering.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+    <Col md={6}>
+      <h3>Robotics Tournaments</h3>
+      <p>
+      Since 2017, we have engaged schools in different robotics tournaments that brings together
+students and industry players as mentors. Students are challenged to create solutions based on the
+theme given to them by designing a robot, programming and sharing their project with the
+professional judges. This process awakens critical thinking, problem solving, sharpens students
+communication and presentational skills shaping them to leaders.
+      </p>
+      <Button variant="primary" href="#/robotics-tournaments">Learn More</Button>
     </Col>
-    <Col md={4}>
-      <Card className="program-card">
-        <Card.Body>
-          <Card.Title>Design Engineering</Card.Title>
-          <Card.Text>
-            Learn the principles of design and engineering through interactive projects.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+  </Row>
+  <Row className="align-items-center my-5">
+    <Col md={6} className="order-md-2">
+      <Card.Img src={ins} className="img-fluid" />
     </Col>
-    <Col md={4}>
-      <Card className="program-card">
-        <Card.Body>
-          <Card.Title>LEGO Makers</Card.Title>
-          <Card.Text>
-            Creative building sessions that inspire innovation and teamwork.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+    <Col md={6} className="order-md-1">
+      <h3>In School Robotics</h3>
+      <p>
+        In partnership with schools, we offer robotics training to students
+        through interactive software with stories they can relate to. We also
+        engage students in projects that introduce them to scientific challenges
+        and help them understand the world and environment better.
+      </p>
+      <Button variant="primary" href="#/in-school-robotics">Learn More</Button>
     </Col>
-    <Col md={4}>
-      <Card className="program-card">
-        <Card.Body>
-          <Card.Title>Scratch Programming</Card.Title>
-          <Card.Text>
-            Learn the basics of coding with Scratch, a fun and visual programming language.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+  </Row>
+  <Row className="align-items-center my-5">
+    <Col md={6}>
+    <Card.Img src={lab} className="img-fluid" />
     </Col>
-    <Col md={4}>
-      <Card className="program-card">
-        <Card.Body>
-          <Card.Title>Arduino</Card.Title>
-          <Card.Text>
-            Dive into electronics and coding with Arduino projects.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+    <Col md={6}>
+      <h3>Mobile Robotics Labs</h3>
+      <p>
+        Our program brings robotics closer to you, whether in your community,
+        home, or school. We ensure students gain hands-on robotics experience,
+        share ideas, and celebrate their work, no matter where they are.
+      </p>
+      <Button variant="primary" href="#/mobile-robotics-labs">Learn More</Button>
     </Col>
-    <Col md={4}>
-      <Card className="program-card">
-        <Card.Body>
-          <Card.Title>Python</Card.Title>
-          <Card.Text>
-            Explore the world of programming with Python, a powerful and versatile language.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+  </Row>
+  <Row className="align-items-center my-5">
+    <Col md={6} className="order-md-2">
+      <Card.Img src={inov} className="img-fluid" />
+    </Col>
+    <Col md={6} className="order-md-1">
+      <h3>Innovation Center</h3>
+      <p>
+        Located in Lavington, our central training center allows students to
+        design models, work on real-life prototypes, and engage in tailored
+        robotics training and other computer-based programs.
+      </p>
+      <Button variant="primary" href="#/innovation-center">Learn More</Button>
     </Col>
   </Row>
 </Container>
-
-      {/* Services Section */}
-      <Container className="services-section">
-        <h2 className="text-center my-4">Our Services</h2>
-        <Row>
-          <Col md={3}>
-            <Card className="service-card" onClick={() => window.location.href = '#/robotics-tournaments'}>
-            <Card.Img variant="top" src={inspire} />
-              <Card.Body>
-                <Card.Title>Robotics Tournaments</Card.Title>
-                <Card.Text>
-                Since 2017, we have engaged schools in different robotics tournaments both regional and
-international. These events bring together students and teachers in a shared learning experience
-through robot design, robot game and project presentations.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={3}>
-            <Card className="service-card" onClick={() => window.location.href = '#/in-school-robotics'}>
-              {/* <Card.Img variant="top" src="https://via.placeholder.com/150" /> */}
-              <Card.Img variant="top" src={ins} />
-              <Card.Body>
-                <Card.Title>In School Robotics</Card.Title>
-                <Card.Text>
-                In partnership with schools, we offer robotics training to students through interactive software with stories they can relate with,
-pictures and videos that introduce them to the scientific challenge that needs solving to help them connect and understand our
-world and environment better. We also engage students in project..
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={3}>
-            <Card className="service-card" onClick={() => window.location.href = '#/mobile-robotics-labs'}>
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
-              <Card.Body>
-                <Card.Title>Mobile Robotics Labs</Card.Title>
-                <Card.Text>
-                Our program brings robotics closer to you. In your community, home, the rural communities, school,
-the marginalized and informal settlement.
-
-Students gain hands-on robotics experience, share ideas and celebrate their work.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={3}>
-            <Card className="service-card" onClick={() => window.location.href = '#/innovation-center'}>
-            <Card.Img variant="top" src={inov} />
-              <Card.Body>
-                <Card.Title>Innovation Center</Card.Title>
-                <Card.Text>
-                We have a central training center in Lavington where students design models and work on real life prototypes and tailored
-robotics training and other computer based programs.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-
-      {/* Video Section */}
-      <Container className="video-section my-5 text-center">
-        <h2>Past Robotics Events</h2>
-        <video width="80%" controls>
-        <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="my-4">
-          <Button variant="primary" href="#/past-events">See More Events</Button>
-        </div>
-      </Container>
 
       {/* Educational Robots Section */}
       <Container className="robots-section text-center my-5">
@@ -210,13 +122,7 @@ robotics training and other computer based programs.
         </Row>
       </Container>
 
-
-
     </div>
-
-    
-
-
 
   );
 };

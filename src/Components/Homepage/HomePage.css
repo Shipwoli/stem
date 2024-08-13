@@ -35,6 +35,7 @@
 .service-card {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+
 }
 
 .service-card:hover {
@@ -96,4 +97,26 @@
   font-size: 1rem;
   color: #555;
 }
+
+.services-section h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 20px rgba(0, 123, 255, 0.5);
+  position: relative;
+  animation: glow 1.5s infinite;
+  font-weight: bold;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(0, 123, 255, 0.9), 0 0 30px rgba(0, 123, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+}
+
 

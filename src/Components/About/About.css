@@ -1,0 +1,46 @@
+.about-page {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  .about-page h1 {
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .about-page .lead {
+    color: #777;
+  }
+  
+  .vision-section, .mission-section, .goal-section, .journey-section {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vision-section .card-title, .mission-section .card-title, .goal-section .card-title, .journey-section .card-title {
+    font-size: 1.8rem;
+    color: #007bff;
+  }
+  
+  .vision-section .card-text, .mission-section .card-text, .goal-section .card-text, .journey-section .card-text {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .journey-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .journey-section li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .journey-section p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 20px;
+  }
+  
