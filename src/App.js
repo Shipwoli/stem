@@ -4,6 +4,8 @@ import Header from "./Components/Header/Header";
 import HomePage from "./Components/Homepage/HomePage";
 import Footer from "./Components/Foooter/Footer";
 import Contact from "./Components/Contact/Contact";
+import Products from "./Components/products/Product";
+import About from "./Components/About/About";
 // index.js or App.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -16,8 +18,8 @@ function App() {
       <main>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/classes" element={<Classes />} /> */}
+         <Route path="/about-us" element={<About />} /> 
+        <Route path="/products" element={<Products/>} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       </main>
