@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import first from'./assets/first.png';
+// import first from'./assets/first.png';
 import inspire from './assets/inspire.jpeg';
 import './HomePage.css';
 import ins from './assets/ins.jpg';
