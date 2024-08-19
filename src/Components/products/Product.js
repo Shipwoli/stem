@@ -51,13 +51,13 @@ const ProductPage = () => {
               <Card.Body className="text-center">
                 <Card.Title className="mb-3">{product.name}</Card.Title>
                 <Card.Text className="mb-3">{product.description}</Card.Text>
-                <Card.Text className="font-weight-bold mb-3">{product.price}</Card.Text>
+                {/* <Card.Text className="font-weight-bold mb-3">{product.price}</Card.Text> */}
                 <Button
                   variant="primary"
                   className="w-100"
                   href={`tel:${phoneNumber}`} // Directs to phone dialer
                 >
-                  Buy Now
+                  Call to Order
                 </Button>
               </Card.Body>
             </Card>
