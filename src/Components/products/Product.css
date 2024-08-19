@@ -1,0 +1,25 @@
+/* ProductPage.css */
+
+.card {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Adjust button color as needed */
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Adjust hover color as needed */
+    border-color: #004080;
+  }
+  

@@ -31,8 +31,8 @@ const Contact = () => {
           <Col md={6} className="mb-4">
             <h4>Contact Information</h4>
             <p><strong>Address:</strong> Owashika Road, Gate 238, Nairobi, Kenya</p>
-            <p><strong>Phone:</strong> +254 123 456 789</p>
-            <p><strong>Email:</strong> info@stemtrix.co.ke</p>
+            <p><strong>Phone:</strong> +254 728 128353</p>
+            <p><strong>Email:</strong> stemtrix@gmail.com</p>
             <div className="map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.821077304485!2d36.76222617326074!3d-1.281063398706754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1bf084fdb2c3%3A0x3419f2185799f585!2sStemtrix%20East%20Africa!5e0!3m2!1sen!2ske!4v1723544421306!5m2!1sen!2ske" 
