@@ -36,7 +36,7 @@ theme given to them by designing a robot, programming and sharing their project 
 professional judges. This process awakens critical thinking, problem solving, sharpens students
 communication and presentational skills shaping them to leaders.
       </p>
-      <Button variant="primary" href="#/robotics-tournaments">Learn More</Button>
+      <Button variant="primary" href="robotics-tournament">Learn More</Button>
     </Col>
   </Row>
   <Row className="align-items-center my-5">
@@ -51,7 +51,7 @@ communication and presentational skills shaping them to leaders.
         engage students in projects that introduce them to scientific challenges
         and help them understand the world and environment better.
       </p>
-      <Button variant="primary" href="#/in-school-robotics">Learn More</Button>
+      <Button variant="primary" href="after-school-robotics">Learn More</Button>
     </Col>
   </Row>
   <Row className="align-items-center my-5">
@@ -65,7 +65,7 @@ communication and presentational skills shaping them to leaders.
         home, or school. We ensure students gain hands-on robotics experience,
         share ideas, and celebrate their work, no matter where they are.
       </p>
-      <Button variant="primary" href="#/mobile-robotics-labs">Learn More</Button>
+      <Button variant="primary" href="mobile-robotic-lab">Learn More</Button>
     </Col>
   </Row>
   <Row className="align-items-center my-5">
@@ -79,7 +79,7 @@ communication and presentational skills shaping them to leaders.
         design models, work on real-life prototypes, and engage in tailored
         robotics training and other computer-based programs.
       </p>
-      <Button variant="primary" href="#/innovation-center">Learn More</Button>
+      <Button variant="primary" href="innovation-centre">Learn More</Button>
     </Col>
   </Row>
 </Container>

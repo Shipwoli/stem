@@ -10,7 +10,10 @@ import Programs from "./Components/Programs/Program";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import ProductPage from "./Components/products/Product";
-
+import AfterSchoolRobotics from "./Components/pages/Inschool";
+import InnovationCentre from "./Components/pages/centr";
+import MobileRoboticsLab from "./Components/pages/Mobilerobotics";
+import RoboticsTournament from "./Components/pages/Tournament";
 
 function App() {
   return (
@@ -23,6 +26,11 @@ function App() {
          <Route path="/programs" element={<Programs />} />
         <Route path="/products" element={<ProductPage/>} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/after-school-robotics" element={<AfterSchoolRobotics/>} />
+        <Route path="/innovation-centre" element={<InnovationCentre />} />
+        <Route path="/mobile-robotic-lab" element={<MobileRoboticsLab />} />
+        <Route path="/robotics-tournament" element={<RoboticsTournament />} />
+
       </Routes>
       </main>
       <Footer /> {/* Add the Footer component here */}

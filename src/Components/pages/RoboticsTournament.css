@@ -1,0 +1,67 @@
+.robotics-tournament-page .glow-heading {
+    color: #004085;
+    text-shadow: 2px 2px 5px #ced4da;
+  }
+  
+  .tournament-section .tournament-img {
+    height: 300px; /* Adjust height as needed */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .tournament-section h3,
+  .events-section h3,
+  .past-events-section h3,
+  .inspire-challenge-section h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .tournament-section p,
+  .events-section p,
+  .past-events-section p,
+  .inspire-challenge-section p {
+    font-size: 1.1rem;
+    color: #495057;
+  }
+  
+  .event-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .event-card .card-title {
+    color: #495057;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .event-card .btn-link {
+    color: #007bff;
+    font-size: 1rem;
+    text-decoration: underline;
+    padding: 0;
+  }
+  
+  .event-card .btn-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  .contact-section h4 {
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section a {
+    color: #004085;
+    text-decoration: none;
+  }
+  
+  .contact-section a:hover {
+    text-decoration: underline;
+  }
+  
