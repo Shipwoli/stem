@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import tournamentImg from './assets/inspire.jpeg'; 
 import './RoboticsTournament.css'; 
 import robofest from './assets/robofest.png'
+import iro from './assets/irlc.png';
 
 
 const RoboticsTournament = () => {
@@ -47,7 +48,7 @@ const RoboticsTournament = () => {
             <p>
               An annual international youth robot sports competition, held by various member countries, nurturing potential leaders in future-oriented robot technology.
             </p>
-            <div className="logo-placeholder">[IRO Logo]</div> {/* Add the logo here */}
+            <Card.Img src={iro} className="img-fluid tournament-img" />
           </Col>
           <Col md={4} className="text-center">
             <h4>First Lego League</h4>
