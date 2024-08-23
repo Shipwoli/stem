@@ -26,10 +26,10 @@ function App() {
          <Route path="/programs" element={<Programs />} />
         <Route path="/products" element={<ProductPage/>} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/after-school-robotics" element={<AfterSchoolRobotics/>} />
-        <Route path="/innovation-centre" element={<InnovationCentre />} />
-        <Route path="/mobile-robotic-lab" element={<MobileRoboticsLab />} />
-        <Route path="/robotics-tournament" element={<RoboticsTournament />} />
+        <Route path="/afterschool" element={<AfterSchoolRobotics/>} />
+        <Route path="/centre" element={<InnovationCentre />} />
+        <Route path="/lab" element={<MobileRoboticsLab />} />
+        <Route path="/tournament" element={<RoboticsTournament />} />
 
       </Routes>
       </main>
