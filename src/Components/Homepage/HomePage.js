@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import inspire from './assets/inspire.jpeg';
+import tournamemt from './assets/tournament.jpeg';
 import './HomePage.css';
 import ins from './assets/ins.jpg';
 
@@ -25,7 +25,7 @@ const HomePage = () => {
   <h2 className="text-center my-4">Our Services</h2>
   <Row className="align-items-center my-5">
     <Col md={6}>
-      <Card.Img src={inspire} className="img-fluid" />
+      <Card.Img src={tournamemt} className="img-fluid" />
     </Col>
     <Col md={6}>
       <h3>Robotics Tournaments</h3>
@@ -44,7 +44,7 @@ communication and presentational skills shaping them to leaders.
       <Card.Img src={ins} className="img-fluid" />
     </Col>
     <Col md={6} className="order-md-1">
-      <h3>In School Robotics</h3>
+      <h3>After-School Robotics</h3>
       <p>
         In partnership with schools, we offer robotics training to students
         through interactive software with stories they can relate to. We also

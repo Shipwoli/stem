@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import tournamentImg from './assets/inspire.jpeg'; 
+import tournamentImg from './assets/tournament2.jpeg'; 
 import './RoboticsTournament.css'; 
 import robofest from './assets/robofest.png'
 import iro from './assets/irlc.png';
+import Inspire from './assets/inspire.jpeg'
 
 
 const RoboticsTournament = () => {
@@ -44,19 +45,13 @@ const RoboticsTournament = () => {
             <Card.Img src={robofest} className="img-fluid tournament-img" />
           </Col>
           <Col md={4} className="text-center">
-            <h4>International Robot Olympiad</h4>
+            <h4>International Robot Olympiad Committee</h4>
             <p>
               An annual international youth robot sports competition, held by various member countries, nurturing potential leaders in future-oriented robot technology.
             </p>
             <Card.Img src={iro} className="img-fluid tournament-img" />
           </Col>
-          <Col md={4} className="text-center">
-            <h4>First Lego League</h4>
-            <p>
-              We proudly host the First Lego League in Kenya, where students explore STEM concepts through fun, hands-on learning with Lego Mindstorms technology.
-            </p>
-            <div className="logo-placeholder">[First Lego League Logo]</div> {/* Add the logo here */}
-          </Col>
+
         </Row>
       </Container>
 
@@ -108,9 +103,18 @@ const RoboticsTournament = () => {
           <Col md={6}>
             <h4>About Inspire Robotics Challenge</h4>
             <p>
-              The Inspire Robotics Challenge brings students together in robot design and coding, research-based projects, core values, problem-solving, and business ideation.
+            Inspire robotics challenge is a fun filled regional robotics competition bringing together
+students aged 4 to 17 years to share, compete and learn from each other’s experience.
+In 3 main age categories as outlined below, students are challenged to think logically and in
+teams, come up with solutions to the challenge presented to them.
+-Explore for students aged 6-9 years
+-Challenge for students aged 10-13 years
+-Innovators for students aged 14-17 years
+Focusing on 4 key areas of core values, project research, robot design, game and (business
+model for innovators) the program aims at inspiring creativity and fostering long term
+friendship through shared learning experience.
             </p>
-            <p>Key Pillars:</p>
+            <p><b>Key Pillars:</b></p>
             <ul>
               <li><strong>Core Values:</strong> Fun, respect, discovery, and impact</li>
               <li><strong>Research Problem:</strong> Prototype development and sharing findings</li>
@@ -119,14 +123,14 @@ const RoboticsTournament = () => {
             </ul>
           </Col>
           <Col md={6}>
-            <Card.Img src={tournamentImg} className="img-fluid tournament-img" />
+            <Card.Img src={Inspire} className="img-fluid tournament-img" />
           </Col>
         </Row>
       </Container>
 
       <Container className="contact-section text-center my-5">
         <h4>Want to Participate in Our Robotics Tournaments?</h4>
-        <p>Email us at <a href="mailto:stemtrix@gmail.com">stemtrix@gmail.com</a> or call 0728 128 353 / 0753 128 353</p>
+        <p>Email us at <a href="mailto:stemtrix@gmail.com">stemtrix@gmail.com</a> or call: +254728 128 353 / +254753 128 353 / +25411039440</p>
       </Container>
     </div>
   );
