@@ -5,16 +5,37 @@
 
 
 .welcome-section {
-  background: url('bc23.jpg') no-repeat center center/cover;
-  height: 150vh; /* Full viewport height */
-  display: flex;
-  background-size:cover; 
+  background: url('bc23.jpg') no-repeat center center;
+  background-size: cover;
   background-position: center;
+  height: 100vh; /* Full viewport height */
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 0 20px;}
+  padding: 0 20px;
+}
+
+/* Media Query for Tablets and Small Screens */
+@media (max-width: 768px) {
+  .welcome-section {
+    background-size: cover; /* Ensure the background still covers the area */
+    height: 80vh; /* Adjust the height if needed */
+    padding: 0 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .welcome-section {
+    background-size: cover; /* Maintain cover size */
+    height: 70vh; /* Further adjust height for mobile */
+    padding: 0 10px; /* Further adjust padding for mobile */
+    text-align: center;
+  }
+}
+
 
 .welcome-section h1 {
   font-size: 4rem;
