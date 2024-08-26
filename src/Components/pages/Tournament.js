@@ -68,8 +68,7 @@ const RoboticsTournament = () => {
     </Col>
   </Row>
 </Container>
-
-      <Container className="international-events-section my-5">
+<Container className="international-events-section mb-5">
   <h3 className="text-center section-title">Our International Robotics Events</h3>
   <Row className="my-5">
     <Col md={6} className="text-center event-col">
@@ -88,6 +87,7 @@ const RoboticsTournament = () => {
     </Col>
   </Row>
 </Container>
+
 
 
 <Container className="past-events-section my-5">
