@@ -19,7 +19,7 @@ const Footer = () => {
             <a href="https://web.facebook.com/search/top?q=stemtrix%20ea" target="_blank" rel="noopener noreferrer" className="ml-2">
               <FaFacebookF />
             </a>
-            <a href="https://www.linkedin.com/in/stemtrix-ea-5ab056204?trk=public_post_feed-actor-image&originalSubdomain=ke" target="_blank" rel="noopener noreferrer" className="ml-2">
+            <a href="https://www.linkedin.com/in/stemtrix-ea-5ab056204/">
               <FaLinkedinIn />
             </a>
             <a href="https://x.com/stemtrix" target="_blank" rel="noopener noreferrer" className="ml-2">
