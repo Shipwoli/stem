@@ -90,46 +90,90 @@ const RoboticsTournament = () => {
 </Container>
 
 
-      <Container className="past-events-section my-5">
-        <h3 className="text-center">Past Events</h3>
-        <Row className="my-5">
-          <Col md={6}>
-            <Card className="event-card">
-              <Card.Body>
-                <Card.Title>Homabay Edition</Card.Title>
-                <p>Theme: Community Upgrade - Hosted at Lasalle School, Homabay</p>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={6}>
-            <Card className="event-card">
-              <Card.Body>
-                <Card.Title>Juja Edition</Card.Title>
-                <p>Theme: Let's Unite - Showcasing collaboration and shared skills</p>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-        <Row className="my-5">
-          <Col md={6}>
-            <Card className="event-card">
-              <Card.Body>
-                <Card.Title>Nairobi Edition</Card.Title>
-                <p>Theme: Food - Reviewing food chain processes and solutions</p>
-                <Button variant="link" href="https://drive.google.com/drive/u/0/shared-with-me" target="_blank">View Gallery</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={6}>
-            <Card className="event-card">
-              <Card.Body>
-                <Card.Title>Mombasa Edition</Card.Title>
-                <p>Theme: Innovation - Hosted in Mombasa</p>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+<Container className="past-events-section my-5">
+  <h3 className="text-center">Past Events</h3>
+
+  <Row className="my-5">
+    <Col md={6}>
+      <Card className="event-card">
+        <Card.Body>
+          <Card.Title>Homabay Edition</Card.Title>
+          <p>Theme: Community Upgrade - Hosted at Lasalle School, Homabay</p>
+          <div className="video-responsive">
+            <iframe
+              src="https://www.youtube.com/embed/k6wVvh5T-_4"
+              title="Homabay Edition"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </Card.Body>
+      </Card>
+    </Col>
+    
+    <Col md={6}>
+      <Card className="event-card">
+        <Card.Body>
+          <Card.Title>First Lego League, Season 2023/2024 </Card.Title>
+          <p><b>Theme: Masterpiece:</b> Teams imagining and innovating new ways to create and communicate art across the globe. Using their imagination to re-think the world of arts!</p>
+          <div className="video-responsive">
+          <iframe
+  src="https://www.youtube.com/embed/qrz-hAlR5j0"
+  title="Fist Lego League, Tournament 2024"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+></iframe>
+
+
+          </div>
+        </Card.Body>
+      </Card>
+    </Col>
+  </Row>
+
+  <Row className="my-5">
+    <Col md={6}>
+      <Card className="event-card">
+        <Card.Body>
+          <Card.Title>Nairobi Edition</Card.Title>
+          <p>Theme: Food - Reviewing food chain processes and solutions</p>
+          <div className="video-responsive">
+          <iframe
+  src="https://www.youtube.com/embed/cfNnN_UxdpQ"
+  title="Nairobi Edition"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+></iframe>
+
+          </div>
+          <Button variant="link" href="https://drive.google.com/drive/u/0/shared-with-me" target="_blank">View Gallery</Button>
+        </Card.Body>
+      </Card>
+    </Col>
+
+    <Col md={6}>
+      <Card className="event-card">
+        <Card.Body>
+          <Card.Title>Mombasa Edition</Card.Title>
+          <p>Theme: Innovation - Hosted in Mombasa</p>
+          <div className="video-responsive">
+            <iframe
+              src="https://www.youtube.com/embed/example4"
+              title="Mombasa Edition"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </Card.Body>
+      </Card>
+    </Col>
+  </Row>
+</Container>
+
 
       <Container className="contact-section text-center my-5">
         <h4>Want to Participate in Our Robotics Tournaments?</h4>
