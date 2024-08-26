@@ -3,15 +3,13 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import tournamemt from './assets/tournament.jpeg';
 import './HomePage.css';
 import ins from './assets/ins.jpg';
-
-
 import inov from './assets/ino.jpg';
 import lab from './assets/lab.jpg';
 
 const HomePage = () => {
   return (
     <div className="home">
-      <meta name="google-site-verification" content="VsrQ3SrAVrmD0EoUxY-49zHHLGXQLgKfB10BQTOUhGw" />
+    
       {/* Welcome Section */}
       <div className="welcome-section">
         <Container className="text-center text-white">
