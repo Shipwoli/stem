@@ -34,6 +34,41 @@ const RoboticsTournament = () => {
         </Row>
       </Container>
 
+
+      <Container className="inspire-challenge-section my-5 py-4">
+  <Row className="justify-content-center">
+    <Col md={2} className="text-center">
+      <img src={Inspire} alt="Inspire Robotics Logo" className="inspire-logo mb-3" />
+    </Col>
+    <Col md={8} className="text-center">
+      <h3 className="section-title">Inspire Robotics Challenge</h3>
+      <p className="section-subtitle">A regional robotics competition organized by Stemtrix East Africa</p>
+    </Col>
+  </Row>
+
+  <Row className="align-items-center mt-4">
+    <Col md={12}>
+      <h4 className="content-title">About Inspire Robotics Challenge</h4>
+      <p className="content-description">
+        The Inspire Robotics Challenge is a fun-filled regional competition that brings together students aged 4 to 17 to share, compete, and learn from each other's experiences.
+      </p>
+      <p className="content-description">
+        Students are challenged to think logically and in teams to develop solutions across three age categories: Explore (6-9 years), Challenge (10-13 years), and Innovators (14-17 years).
+      </p>
+      <p className="content-description">
+        The program focuses on four key areas: core values, project research, robot design, and presentation, fostering creativity and long-term friendships through shared learning.
+      </p>
+      <p className="key-pillars-title"><strong>Key Pillars:</strong></p>
+      <ul className="key-pillars-list">
+        <li><strong>Core Values:</strong> Fun, respect, discovery, and impact</li>
+        <li><strong>Research Problem:</strong> Prototype development and sharing findings</li>
+        <li><strong>Robot Design and Game:</strong> Designing autonomous robots for challenges</li>
+        <li><strong>Presentation:</strong> Showcasing work with clarity and precision</li>
+      </ul>
+    </Col>
+  </Row>
+</Container>
+
       <Container className="international-events-section my-5">
   <h3 className="text-center section-title">Our International Robotics Events</h3>
   <Row className="my-5">
@@ -95,42 +130,6 @@ const RoboticsTournament = () => {
           </Col>
         </Row>
       </Container>
-
-      <Container className="inspire-challenge-section my-5 py-4">
-  <Row className="justify-content-center">
-    <Col md={2} className="text-center">
-      <img src={Inspire} alt="Inspire Robotics Logo" className="inspire-logo mb-3" />
-    </Col>
-    <Col md={8} className="text-center">
-      <h3 className="section-title">Inspire Robotics Challenge</h3>
-      <p className="section-subtitle">A regional robotics competition organized by Stemtrix East Africa</p>
-    </Col>
-  </Row>
-
-  <Row className="align-items-center mt-4">
-    <Col md={12}>
-      <h4 className="content-title">About Inspire Robotics Challenge</h4>
-      <p className="content-description">
-        The Inspire Robotics Challenge is a fun-filled regional competition that brings together students aged 4 to 17 to share, compete, and learn from each other's experiences.
-      </p>
-      <p className="content-description">
-        Students are challenged to think logically and in teams to develop solutions across three age categories: Explore (6-9 years), Challenge (10-13 years), and Innovators (14-17 years).
-      </p>
-      <p className="content-description">
-        The program focuses on four key areas: core values, project research, robot design, and presentation, fostering creativity and long-term friendships through shared learning.
-      </p>
-      <p className="key-pillars-title"><strong>Key Pillars:</strong></p>
-      <ul className="key-pillars-list">
-        <li><strong>Core Values:</strong> Fun, respect, discovery, and impact</li>
-        <li><strong>Research Problem:</strong> Prototype development and sharing findings</li>
-        <li><strong>Robot Design and Game:</strong> Designing autonomous robots for challenges</li>
-        <li><strong>Presentation:</strong> Showcasing work with clarity and precision</li>
-      </ul>
-    </Col>
-  </Row>
-</Container>
-
-
 
       <Container className="contact-section text-center my-5">
         <h4>Want to Participate in Our Robotics Tournaments?</h4>
