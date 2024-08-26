@@ -115,7 +115,7 @@ const RoboticsTournament = () => {
     <Col md={6}>
       <Card className="event-card">
         <Card.Body>
-          <Card.Title>Masterpiece 2023/2024 </Card.Title>
+          <Card.Title>Masterpiece, Season 2023/2024 </Card.Title>
           <p><b>Theme: Masterpiece:</b> Teams imagining and innovating new ways to create and communicate art across the globe. Using their imagination to re-think the world of arts!</p>
           <div className="video-responsive">
           <iframe

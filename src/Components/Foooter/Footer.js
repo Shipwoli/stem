@@ -13,16 +13,16 @@ const Footer = () => {
           </Col>
           <Col md={6} className="text-md-right">
             <p className="mb-0">Follow us on:</p>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="ml-2">
+            <a href="https://www.instagram.com/stemtrix2/" target="_blank" rel="noopener noreferrer" className="ml-2">
               <FaInstagram />
             </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="ml-2">
+            <a href="https://web.facebook.com/search/top?q=stemtrix%20ea" target="_blank" rel="noopener noreferrer" className="ml-2">
               <FaFacebookF />
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="ml-2">
+            <a href="https://www.linkedin.com/in/stemtrix-ea-5ab056204?trk=public_post_feed-actor-image&originalSubdomain=ke" target="_blank" rel="noopener noreferrer" className="ml-2">
               <FaLinkedinIn />
             </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="ml-2">
+            <a href="https://x.com/stemtrix" target="_blank" rel="noopener noreferrer" className="ml-2">
               <FaTwitter />
             </a>
           </Col>
