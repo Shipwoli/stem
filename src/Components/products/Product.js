@@ -37,7 +37,7 @@ const products = [
   },
 ];
 
-const phoneNumber = "+254790844918"; // Replace with your actual phone number
+const phoneNumber = "+254 728 128353"; // Replace with your actual phone number
 
 const ProductPage = () => {
   return (

@@ -115,12 +115,12 @@ const RoboticsTournament = () => {
     <Col md={6}>
       <Card className="event-card">
         <Card.Body>
-          <Card.Title>First Lego League, Season 2023/2024 </Card.Title>
+          <Card.Title>Masterpiece 2023/2024 </Card.Title>
           <p><b>Theme: Masterpiece:</b> Teams imagining and innovating new ways to create and communicate art across the globe. Using their imagination to re-think the world of arts!</p>
           <div className="video-responsive">
           <iframe
   src="https://www.youtube.com/embed/qrz-hAlR5j0"
-  title="Fist Lego League, Tournament 2024"
+  title="Masterpiece 2023/2024"
   frameBorder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowFullScreen

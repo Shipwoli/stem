@@ -3,7 +3,6 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import tournamemt from './assets/tournament.jpeg';
 import './HomePage.css';
 import ins from './assets/ins.jpg';
-
 import spike from './assets/spike.jpg';
 import wedo from './assets/wedo.jpg';
 import ev from './assets/ev.jpg';
@@ -85,43 +84,47 @@ const HomePage = () => {
         </Row>
       </Container>
 
-      {/* Educational Robots Section */}
-      <Container className="robots-section text-center my-5">
-        <h2>Educational Robots for Every Learner</h2>
-        <p>Discover our range of educational robots designed to inspire creativity and learning, including Spike Essential, WeDo 2.0, and many more.</p>
-        <Row>
-          <Col xs={12} md={4}>
-            <Card className="robot-card">
-              <Card.Img variant="top" src={spike} />
-              <Card.Body>
-                <Card.Title>Spike Essential</Card.Title>
-                <Card.Text>Engage young minds with hands-on learning through Spike Essential.</Card.Text>
-                <Button variant="primary" href="#/spike-essential">Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col xs={12} md={4}>
-            <Card className="robot-card">
-              <Card.Img variant="top" src={wedo} />
-              <Card.Body>
-                <Card.Title>WeDo 2.0</Card.Title>
-                <Card.Text>Simple, engaging, and effective learning with WeDo 2.0.</Card.Text>
-                <Button variant="primary" href="#/wedo-2-0">Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col xs={12} md={4}>
-            <Card className="robot-card">
-              <Card.Img variant="top" src={ev} />
-              <Card.Body>
-                <Card.Title>More Robots</Card.Title>
-                <Card.Text>Explore more educational robots that foster innovation.</Card.Text>
-                <Button variant="primary" href="#/more-robots">Explore More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+      {/* Tournament Reviews Section */}
+      <div className="tournament-reviews-section">
+        <Container>
+          <h2 className="text-center my-4">Stemtrix Tournament Reviews</h2>
+          <Row className="my-4">
+            <Col xs={12} md={4} className="mb-4">
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_1"
+                  title="Tournament Review 1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </Col>
+            <Col xs={12} md={4} className="mb-4">
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_2"
+                  title="Tournament Review 2"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </Col>
+            <Col xs={12} md={4} className="mb-4">
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_3"
+                  title="Tournament Review 3"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 };
