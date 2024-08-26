@@ -65,3 +65,91 @@
     text-decoration: underline;
   }
   
+
+  .international-events-section {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .event-col {
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+  
+  .event-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #0056b3;
+  }
+  
+  .event-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+  .event-img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .inspire-challenge-section {
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #0056b3;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .inspire-logo {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+  
+  .content-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #0056b3;
+  }
+  
+  .content-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .key-pillars-title {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    color: #0056b3;
+  }
+  
+  .key-pillars-list {
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    color: #555;
+  }
+  

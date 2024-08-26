@@ -35,25 +35,25 @@ const RoboticsTournament = () => {
       </Container>
 
       <Container className="international-events-section my-5">
-        <h3 className="text-center">Our International Robotics Events</h3>
-        <Row className="my-5">
-          <Col md={4} className="text-center">
-            <h4>Robofest</h4>
-            <p>
-              Hosted by Lawrence Technological University in Southfield, MI, Robofest is a festival of competitions encouraging students to learn STEAM and Computer Science principles through autonomous robot design and programming.
-            </p>
-            <Card.Img src={robofest} className="img-fluid tournament-img" />
-          </Col>
-          <Col md={4} className="text-center">
-            <h4>International Robot Olympiad Committee</h4>
-            <p>
-              An annual international youth robot sports competition, held by various member countries, nurturing potential leaders in future-oriented robot technology.
-            </p>
-            <Card.Img src={iro} className="img-fluid tournament-img" />
-          </Col>
+  <h3 className="text-center section-title">Our International Robotics Events</h3>
+  <Row className="my-5">
+    <Col md={6} className="text-center event-col">
+      <h4 className="event-title">Robofest</h4>
+      <p className="event-description">
+        Hosted by Lawrence Technological University in Southfield, MI, Robofest is a festival of competitions encouraging students to learn STEAM and Computer Science principles through autonomous robot design and programming.
+      </p>
+      <Card.Img src={robofest} className="img-fluid tournament-img event-img" />
+    </Col>
+    <Col md={6} className="text-center event-col">
+      <h4 className="event-title">International Robot Olympiad Committee</h4>
+      <p className="event-description">
+        An annual international youth robot sports competition, held by various member countries, nurturing potential leaders in future-oriented robot technology.
+      </p>
+      <Card.Img src={iro} className="img-fluid tournament-img event-img" />
+    </Col>
+  </Row>
+</Container>
 
-        </Row>
-      </Container>
 
       <Container className="past-events-section my-5">
         <h3 className="text-center">Past Events</h3>
@@ -96,37 +96,41 @@ const RoboticsTournament = () => {
         </Row>
       </Container>
 
-      <Container className="inspire-challenge-section my-5">
-        <h3 className="text-center">Inspire Robotics Challenge</h3>
-        <p className="lead text-center">A regional robotics competition organized by Stemtrix East Africa</p>
-        <Row className="align-items-center">
-          <Col md={6}>
-            <h4>About Inspire Robotics Challenge</h4>
-            <p>
-            Inspire robotics challenge is a fun filled regional robotics competition bringing together
-students aged 4 to 17 years to share, compete and learn from each other’s experience.
-In 3 main age categories as outlined below, students are challenged to think logically and in
-teams, come up with solutions to the challenge presented to them.
--Explore for students aged 6-9 years
--Challenge for students aged 10-13 years
--Innovators for students aged 14-17 years
-Focusing on 4 key areas of core values, project research, robot design, game and (business
-model for innovators) the program aims at inspiring creativity and fostering long term
-friendship through shared learning experience.
-            </p>
-            <p><b>Key Pillars:</b></p>
-            <ul>
-              <li><strong>Core Values:</strong> Fun, respect, discovery, and impact</li>
-              <li><strong>Research Problem:</strong> Prototype development and sharing findings</li>
-              <li><strong>Robot Design and Game:</strong> Designing autonomous robots for challenges</li>
-              <li><strong>Presentation:</strong> Showcasing work with clarity and precision</li>
-            </ul>
-          </Col>
-          <Col md={6}>
-            <Card.Img src={Inspire} className="img-fluid tournament-img" />
-          </Col>
-        </Row>
-      </Container>
+      <Container className="inspire-challenge-section my-5 py-4">
+  <Row className="justify-content-center">
+    <Col md={2} className="text-center">
+      <img src={Inspire} alt="Inspire Robotics Logo" className="inspire-logo mb-3" />
+    </Col>
+    <Col md={8} className="text-center">
+      <h3 className="section-title">Inspire Robotics Challenge</h3>
+      <p className="section-subtitle">A regional robotics competition organized by Stemtrix East Africa</p>
+    </Col>
+  </Row>
+
+  <Row className="align-items-center mt-4">
+    <Col md={12}>
+      <h4 className="content-title">About Inspire Robotics Challenge</h4>
+      <p className="content-description">
+        The Inspire Robotics Challenge is a fun-filled regional competition that brings together students aged 4 to 17 to share, compete, and learn from each other's experiences.
+      </p>
+      <p className="content-description">
+        Students are challenged to think logically and in teams to develop solutions across three age categories: Explore (6-9 years), Challenge (10-13 years), and Innovators (14-17 years).
+      </p>
+      <p className="content-description">
+        The program focuses on four key areas: core values, project research, robot design, and presentation, fostering creativity and long-term friendships through shared learning.
+      </p>
+      <p className="key-pillars-title"><strong>Key Pillars:</strong></p>
+      <ul className="key-pillars-list">
+        <li><strong>Core Values:</strong> Fun, respect, discovery, and impact</li>
+        <li><strong>Research Problem:</strong> Prototype development and sharing findings</li>
+        <li><strong>Robot Design and Game:</strong> Designing autonomous robots for challenges</li>
+        <li><strong>Presentation:</strong> Showcasing work with clarity and precision</li>
+      </ul>
+    </Col>
+  </Row>
+</Container>
+
+
 
       <Container className="contact-section text-center my-5">
         <h4>Want to Participate in Our Robotics Tournaments?</h4>
