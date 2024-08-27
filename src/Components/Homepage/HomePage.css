@@ -8,7 +8,7 @@
   background: url('bc23.jpg') no-repeat center center;
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Full viewport height */
+  height: 150vh; /* Full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
