@@ -83,7 +83,7 @@ const HomePage = () => {
 
       {/* News Section */}
 <Container className="news-section my-5">
-  <h2 className="text-center mb-4">Stemtrix News</h2>
+  <h2 className="text-center mb-4">Tournaments Reviews</h2>
   <Row className="mb-5">
     <Col md={6}>
       <Card className="news-card">
@@ -97,7 +97,7 @@ const HomePage = () => {
 ></iframe>
 
         <Card.Body>
-          <Card.Title>Riara Springs Girls High School Win</Card.Title>
+          <Card.Title>Riara Springs Girls High School</Card.Title>
           <p>
             Riara Springs Girls High School are the winners of the Stemtrix Robotics Competition Nairobi Edition. The competition attracted 19 schools, with 'Nanobytes' emerging victorious.
           </p>
