@@ -14,8 +14,8 @@ const HomePage = () => {
       {/* Welcome Section */}
       <div className="welcome-section">
         <Container className="text-center text-white">
-          <h1>Welcome to Stemtrix</h1>
-          <p>Empowering the next generation through robotics and innovation.</p>
+         
+          <p>Empowering the next generation with hands-on robotics and innovative learning.</p>
         </Container>
       </div>
 
