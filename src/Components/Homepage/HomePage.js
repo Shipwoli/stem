@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import tournamemt from './assets/tournament.jpeg';
 import './HomePage.css';
 import ins from './assets/ins.jpg';
@@ -33,7 +34,9 @@ const HomePage = () => {
               theme given to them by designing a robot, programming, and sharing their project with professional judges.
               This process awakens critical thinking, problem-solving, and sharpens students' communication and presentational skills shaping them into leaders.
             </p>
-            <Button variant="primary" href="/robotics-tournament">Learn More</Button>
+            <Link to="/robotics-tournament">
+              <Button variant="primary">Learn More</Button>
+            </Link>
           </Col>
         </Row>
         <Row className="align-items-center my-5">
@@ -48,7 +51,9 @@ const HomePage = () => {
               engage students in projects that introduce them to scientific challenges
               and help them understand the world and environment better.
             </p>
-            <Button variant="primary" href="/after-school-robotics">Learn More</Button>
+            <Link to="/after-school-robotics">
+              <Button variant="primary">Learn More</Button>
+            </Link>
           </Col>
         </Row>
         <Row className="align-items-center my-5">
@@ -62,7 +67,9 @@ const HomePage = () => {
               home, or school. We ensure students gain hands-on robotics experience,
               share ideas, and celebrate their work, no matter where they are.
             </p>
-            <Button variant="primary" href="/mobile-robotic-lab">Learn More</Button>
+            <Link to="/mobile-robotic-lab">
+              <Button variant="primary">Learn More</Button>
+            </Link>
           </Col>
         </Row>
         <Row className="align-items-center my-5">
@@ -76,79 +83,75 @@ const HomePage = () => {
               design models, work on real-life prototypes, and engage in tailored
               robotics training and other computer-based programs.
             </p>
-            <Button variant="primary" href="/innovation-centre">Learn More</Button>
+            <Link to="/innovation-centre">
+              <Button variant="primary">Learn More</Button>
+            </Link>
           </Col>
         </Row>
       </Container>
 
       {/* News Section */}
-<Container className="news-section my-5">
-  <h2 className="text-center mb-4">Tournaments Reviews</h2>
-  <Row className="mb-5">
-    <Col md={6}>
-      <Card className="news-card">
-      <iframe
-  src="https://www.youtube.com/embed/cfNnN_UxdpQ"
-  title="Riara Springs Girls High School"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-  className="video-frame"
-></iframe>
-
-        <Card.Body>
-          <Card.Title>Riara Springs Girls High School</Card.Title>
-          <p>
-            Riara Springs Girls High School are the winners of the Stemtrix Robotics Competition Nairobi Edition. The competition attracted 19 schools, with 'Nanobytes' emerging victorious.
-          </p>
-        </Card.Body>
-      </Card>
-    </Col>
-    <Col md={6}>
-      <Card className="news-card">
-      <iframe
-  src="https://www.youtube.com/embed/RKgyaGQUqsE"
-  title="2023-2024 Robotics Season"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-  className="video-frame"
-></iframe>
-
-        <Card.Body>
-          <Card.Title>2023-2024 Robotics Season Kicks Off</Card.Title>
-          <p>
-            The 2023-2024 Robotics Season has kicked off. Students have the opportunity to test their creativity in both the regional competition and the 'Masterpiece' First Lego League Challenge.
-          </p>
-        </Card.Body>
-      </Card>
-    </Col>
-  </Row>
-  <Row>
-    <Col md={6}>
-      <Card className="news-card">
-      <iframe
-  src="https://www.youtube.com/embed/wuryEJJwduc"
-  title="Green Garden Girls High School"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-  className="video-frame"
-></iframe>
-
-        <Card.Body>
-          <Card.Title>Green Garden Girls High School Representing Kenya</Card.Title>
-          <p>
-            Ten girls from Green Garden Girls High School in Kiambu will represent Kenya and East Africa in the World's First Robotics Education Competition in Houston, Texas.
-          </p>
-        </Card.Body>
-      </Card>
-    </Col>
-  </Row>
-</Container>
-
-
-     
+      <Container className="news-section my-5">
+        <h2 className="text-center mb-4">Tournaments Reviews</h2>
+        <Row className="mb-5">
+          <Col md={6}>
+            <Card className="news-card">
+              <iframe
+                src="https://www.youtube.com/embed/cfNnN_UxdpQ"
+                title="Riara Springs Girls High School"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="video-frame"
+              ></iframe>
+              <Card.Body>
+                <Card.Title>Riara Springs Girls High School</Card.Title>
+                <p>
+                  Riara Springs Girls High School are the winners of the Stemtrix Robotics Competition Nairobi Edition. The competition attracted 19 schools, with 'Nanobytes' emerging victorious.
+                </p>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6}>
+            <Card className="news-card">
+              <iframe
+                src="https://www.youtube.com/embed/RKgyaGQUqsE"
+                title="2023-2024 Robotics Season"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="video-frame"
+              ></iframe>
+              <Card.Body>
+                <Card.Title>2023-2024 Robotics Season Kicks Off</Card.Title>
+                <p>
+                  The 2023-2024 Robotics Season has kicked off. Students have the opportunity to test their creativity in both the regional competition and the 'Masterpiece' First Lego League Challenge.
+                </p>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Card className="news-card">
+              <iframe
+                src="https://www.youtube.com/embed/wuryEJJwduc"
+                title="Green Garden Girls High School"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="video-frame"
+              ></iframe>
+              <Card.Body>
+                <Card.Title>Green Garden Girls High School Representing Kenya</Card.Title>
+                <p>
+                  Ten girls from Green Garden Girls High School in Kiambu will represent Kenya and East Africa in the World's First Robotics Education Competition in Houston, Texas.
+                </p>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
