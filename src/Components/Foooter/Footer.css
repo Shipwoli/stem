@@ -1,26 +1,39 @@
 .footer {
-  background-color: rgb(88, 88, 173);
-  color: black;
+  background-color: blue; /* Updated to a more professional color */
+  color: #fff; /* White text for better contrast */
+  padding: 1rem 0; /* Added padding for a cleaner look */
 }
 
-.footer p {
-  margin: 0;
+.footer-left {
   font-size: 0.9rem;
 }
 
-.footer a {
-  color: black;
-  font-size: 1.2rem;
-  margin-left: 10px;
+.footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.footer a:hover {
-  color: yellow;
+.footer-right p {
+  margin: 0;
+  margin-right: 1rem; /* Added space between text and icons */
+  font-size: 0.9rem;
+}
+
+.social-icon {
+  color: #fff; /* White icons for better contrast */
+  font-size: 1.5rem; /* Slightly larger icons */
+  margin-left: 10px;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.social-icon:hover {
+  color: #ffd700; /* Golden color for hover effect */
 }
 
 @media (max-width: 767px) {
-  .text-md-right {
-    text-align: left !important;
+  .footer-right {
+    justify-content: flex-start; /* Align icons to the left on smaller screens */
     margin-top: 10px;
   }
 }
