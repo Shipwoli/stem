@@ -1,233 +1,195 @@
 /* Home.css */
 .home {
-  padding: 0;
-}
-
-
-.welcome-section {
-  background: url('bc23.jpg') no-repeat center center;
-  background-size: cover;
-  background-position: center;
-  height: 150vh; /* Full viewport height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 0 20px;
-}
-
-/* Media Query for Tablets and Small Screens */
-@media (max-width: 768px) {
-  .welcome-section {
-    background-size: cover; /* Ensure the background still covers the area */
-    height: 80vh; /* Adjust the height if needed */
-    padding: 0 15px; /* Adjust padding for smaller screens */
-  }
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 480px) {
-  .welcome-section {
-    background-size: cover; /* Maintain cover size */
-    height: 70vh; /* Further adjust height for mobile */
-    padding: 0 10px; /* Further adjust padding for mobile */
-    text-align: center;
-  }
-}
-
-
-
-.welcome-section p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: white;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
-}
-
-.services-section {
-  padding: 4rem 5;
-}
-
-.service-card {
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-
-}
-
-.service-card:hover {
-  transform: scale(1.05);
-}
-
-.video-section h2 {
-  margin-bottom: 1.5rem;
-}
-
-.video-section video {
-  border-radius: 8px;
-}
-
-.robots-section {
-  padding: 4rem 0;
-}
-
-.robot-card {
-  transition: transform 0.2s ease-in-out;
-}
-
-.robot-card:hover {
-  transform: scale(1.05);
-}
-
-.robots-section h2 {
-  margin-bottom: 1.5rem;
-  font-size: 2.5rem;
-}
-
-.robots-section p {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-}
-
-.programs-section {
-  padding: 40px 0;
+  padding-top: 0;
+  font-family: Arial, sans-serif;
   background-color: #f8f9fa;
 }
 
-.program-card {
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: url('back2.png') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5vw;
+  color: white;
+}
+
+.hero-title {
+  padding-top: 1px;
+  font-size: 6vw; /* Responsive text */
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(218, 220, 227, 0.567);
+}
+
+.hero-text {
+  font-size: 2.5vw;
   margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.cta-btn {
+  font-size: 1.8vw;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-inline-end: 12px;
+}
+
+.cta-btn:hover {
+  background: #0056b3;
+}
+
+/* Robotics Kits Section */
+.kits-section {
+  padding: 60px 5vw;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  border-top: 4px solid #007bff;
+  border-bottom: 4px solid #007bff;
+}
+
+.kits-title {
+  font-size: 4vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.kits-text {
+  font-size: 2vw;
+  color: #555;
+  max-width: 90%;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+.kits-btn {
+  font-size: 2vw;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  color: #007bff;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.program-card:hover {
+.kits-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #25D366;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.whatsapp-button a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-icon {
+  font-size: 3vw;
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 70vh;
+    padding: 10px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .kits-title {
+    font-size: 2rem;
+  }
+
+  .kits-text {
+    font-size: 1rem;
+  }
+
+  .kits-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+
+  .whatsapp-button {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .whatsapp-icon {
+    font-size: 1.5rem;
+  }
+}
+
+.news-section {
+  text-align: center;
+}
+
+.news-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-card:hover {
   transform: translateY(-5px);
-}
-
-.program-card .card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.program-card .card-text {
-  font-size: 1rem;
-  color: #555;
-}
-
-.services-section h2 {
-  font-size: 2.5rem;
-  color: #007bff;
-  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 20px rgba(0, 123, 255, 0.5);
-  position: relative;
-  animation: glow 1.5s infinite;
-  font-weight: bold;
-}
-
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.3);
-  }
-  50% {
-    text-shadow: 0 0 15px rgba(0, 123, 255, 0.9), 0 0 30px rgba(0, 123, 255, 0.7);
-  }
-  100% {
-    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.3);
-  }
-}
-
-
-.tournament-reviews-section {
-  padding: 40px 0;
-  background-color: #f9f9f9;
-}
-
-.tournament-reviews-section h2 {
-  margin-bottom: 30px;
 }
 
 .video-container {
   position: relative;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
 
-.video-container iframe {
+.video-frame {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-
-.international-events-section {
-  padding: 40px 0;
-  background-color: #f4f4f4;
-  border-top: 3px solid #007bff; /* Border color */
-  border-bottom: 3px solid #007bff; /* Border color */
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #007bff;
-}
-
-.event-col {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.event-title {
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-}
-
-.event-description {
-  margin-bottom: 15px;
-}
-
-.event-img {
-  border-radius: 8px;
-}
-
-.news-section h2 {
-  font-weight: bold;
-  color: #333;
-}
-
-.news-card {
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  margin-bottom: 20px;
 }
 
-.news-card:hover {
-  transform: translateY(-10px);
+.card-body p {
+  flex-grow: 1; /* Ensures even spacing in cards */
 }
 
-.video-frame {
-  width: 100%;
-  height: 300px;
-}
-
-.news-card .card-body {
-  padding: 20px;
-}
-
-.news-card .card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.news-card p {
-  font-size: 1rem;
-  color: #555;
-  margin-top: 10px;
-}
 

@@ -5,93 +5,107 @@ import './About.css'; // Ensure to style this in your CSS file
 const About = () => {
   return (
     <div className="about-page">
+      {/* Introduction Section */}
       <Container className="text-left my-5">
-        <h1 className="display-4 mb-4">About Stemtrix</h1>
-        <p className="lead mb-5">Transforming young minds through the power of robotics and creativity.</p>
+        <h1 className="display-4 mb-4 text-center">About Stemtrix</h1>
+        <p className="lead text-center mb-5">
+          Transforming young minds through the power of robotics and creativity.
+        </p>
+
         <p className="text-muted">
-        <p>Stemtrix equips students with skills that help build their confidence, inspire their creativity and problem solving through robotics training, expos and robotics tournaments.</p>
-        <p>Since 2017, we have held different themed robotics tournaments bringing together students from different backgrounds in design process, timed robotics challenges, project presentations, while upholding a set core values that encourage fun, discover, inclusion, impact and sharing their new learnt skills.</p>
-          
-          By partnering with schools, parents, and industry experts, we have inspired thousands of students in the East African region to explore STEM fields and develop solutions to real-world problems. Our interactive, hands-on approach encourages students aged 4 to 17 to explore, design, and test their ideas, fueling their curiosity and transforming their perspectives on the world.
-          <p>Working closely with schools, parents, students and professional judges from different fields, thousands of students within the East African community have been inspired to create solutions to the pressing issues within our society.</p>
-          <p>Our aim is to inspire interest in Science, Technology, Engineering, Computer Science, Math (STEAM) subjects by introducing students between 4 years and 17 years to problems that need solving through interactive hands-on models that help fuel the sense of wonder, reveal things so profound that help change how they view the world. Robotics helps trigger the how questions that help understand inventions around us and how human life has transformed in ways never imagined before.</p>
-          <p>We encourage the students to reflect, design working models and prototypes and test their work through simple codes that are easy to understand and interpret.</p>
-          <p>Learning through robotics is not only hands-on, its fun, involving and memorable.</p>
+          Stemtrix equips students with skills that build confidence, inspire creativity, and enhance problem-solving through robotics training, expos, and tournaments.
+        </p>
+
+        <p className="text-muted">
+          Since 2017, we have hosted various themed robotics tournaments, bringing together students from diverse backgrounds to engage in design processes, timed challenges, and project presentations—while upholding core values of <b>fun, discovery, inclusion, impact, and sharing.</b>
+        </p>
+
+        <p className="text-muted">
+          By partnering with schools, parents, and industry experts, we have inspired thousands of students across East Africa to explore STEM fields and develop solutions to real-world problems. Our hands-on approach encourages students aged 4 to 17 to <b>design, build, and innovate,</b> fostering curiosity and a transformative perspective on the world.
+        </p>
+
+        <p className="text-muted">
+          Learning through robotics is not only hands-on—it’s <b>fun, engaging, and memorable</b>
         </p>
       </Container>
 
-      <Container className="vision-section my-5">
-        <Row>
-          <Col md={12} className="mb-4">
-            <Card className="p-4 shadow-lg border-0 rounded">
-              <Card.Body>
-                <Card.Title className="text-center mb-4">Our Vision</Card.Title>
-                <Card.Text>
-                  <strong className="d-block mb-3">Inspire the Innovators of Tomorrow</strong>
-                  Our vision is to ignite curiosity and creativity in every child, empowering them to become future leaders in technology and innovation. We strive to make STEM education accessible, enjoyable, and impactful, fostering a lifelong passion for learning.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+      {/* Vision, Mission, Goal Sections */}
+      {[
+        {
+          title: "Our Vision",
+          subtitle: "Inspiring the Innovators of Tomorrow",
+          text: "We aim to ignite curiosity and creativity in every child, empowering them to become future leaders in technology and innovation. Our goal is to make STEM education accessible, enjoyable, and impactful, fostering a lifelong passion for learning.",
+        },
+        {
+          title: "Our Mission",
+          subtitle: "Empowering Through Education",
+          text: "We provide high-quality robotics education that nurtures creativity, problem-solving, and critical thinking. Our platform enables children to confidently explore technology, build innovative projects, and develop skills that will benefit them in their future careers.",
+        },
+        {
+          title: "Our Goal",
+          subtitle: "Cultivating Future Technologists",
+          text: "We engage students in hands-on robotics and STEM activities that enhance their research, problem-solving, and teamwork skills. Through project-based learning, we prepare students to tackle real-world challenges and excel in a technology-driven world.",
+        },
+      ].map((section, index) => (
+        <Container key={index} className="my-5">
+          <Row>
+            <Col md={12}>
+              <Card className="p-4 shadow-lg border-0 rounded text-center">
+                <Card.Body>
+                  <Card.Title className="mb-4">{section.title}</Card.Title>
+                  <Card.Text>
+                    <strong className="d-block mb-3">{section.subtitle}</strong>
+                    {section.text}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      ))}
+
+      {/* Our Journey Section */}
+      <Container className="my-5">
+        <h2 className="text-center mb-4">Our Journey: Inspiring the Future Through Robotics</h2>
+        <p className="text-center">
+          Since our inception, <strong>Stemtrix</strong> has been at the forefront of robotics education, empowering young minds and propelling Kenyan teams onto the global stage. Our journey is marked by dedication, innovation, and a relentless pursuit of excellence.
+        </p>
+
+        <ul className="list-group list-group-flush">
+          {[
+            { year: "2018", event: "Green Panthers represented East Africa at the FIRST Robotics World Festival in Texas, USA." },
+            { year: "2019", event: "Alliance Girls showcased Kenya’s robotics talent at the FIRST World Festival in Texas." },
+            { year: "Jan 2024", event: "Team Kenya participated in the International Robotics Olympiad Committee (IROC) in Greece." },
+            { year: "May 2024", event: "Merishaw School led Team Kenya at Robofest in Michigan, USA." },
+            { year: "Oct 2024", event: "Hosted the 'Back to Basics' Robotics Tournament at Brookhouse School, Karen. International Schools of Kenya and Children’s Garden School emerged victorious." },
+            { year: "Jan 2025", event: "Brookhouse School represented Team Kenya at the International Robot Olympiad in Busan, Korea." },
+            { year: "Feb 2025", event: "Organized the Robofest Tournament at Merishaw School, qualifying teams to represent Kenya at the Robofest International Robotics Tournament in Michigan, USA." },
+          ].map((milestone, index) => (
+            <li key={index} className="list-group-item">
+              <strong>✅ {milestone.year}:</strong> {milestone.event}
+            </li>
+          ))}
+        </ul>
+
+        <p className="text-center mt-4">
+          Through every competition, workshop, and tournament, <strong>Stemtrix</strong> continues to inspire creativity, problem-solving, and global competitiveness in STEM education. We remain committed to **equipping young innovators with the skills and confidence to shape the future of robotics.**
+        </p>
       </Container>
 
-      <Container className="mission-section my-5">
-        <Row>
-          <Col md={12} className="mb-4">
-            <Card className="p-4 shadow-lg border-0 rounded">
-              <Card.Body>
-                <Card.Title className="text-center mb-4">Our Mission</Card.Title>
-                <Card.Text>
-                  <strong className="d-block mb-3">Empowering Through Education</strong>
-                  Our mission is to provide high-quality robotics education that nurtures creativity, problem-solving skills, and critical thinking. We offer a platform where children can confidently explore technology, build innovative projects, and develop skills that will benefit them in their future careers.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-
-      <Container className="goal-section my-5">
-        <Row>
-          <Col md={12} className="mb-4">
-            <Card className="p-4 shadow-lg border-0 rounded">
-              <Card.Body>
-                <Card.Title className="text-center mb-4">Our Goal</Card.Title>
-                <Card.Text>
-                  <strong className="d-block mb-3">Cultivating Future Technologists</strong>
-                  Our goal is to engage students in hands-on robotics and STEM activities that enhance their research, problem-solving, and teamwork skills. Through project-based learning, we prepare students to tackle real-world challenges and excel in a technology-driven world.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-
-      <Container className="journey-section my-5">
-        <Row>
-          <Col md={12} className="mb-4">
-            <Card className="p-4 shadow-lg border-0 rounded">
-              <Card.Body>
-                <Card.Title className="text-center mb-4">Our Journey</Card.Title>
-                <Card.Text>
-                  <p>
-                    Since our inception, Stemtrix has embarked on a journey of growth and success:
-                  </p>
-                  <ul className="list-unstyled">
-                    <li>2018: Green Panthers represented East Africa at the World Festivals in Texas for the FIRST tournament.</li>
-                    <li>2019: Alliance Girls represented Kenya at the World Festival in Texas for the FIRST tournament.</li>
-                    <li>2024 January: Team Kenya attended the International Robotics Olympiad Committee in Greece.</li>
-                    <li>2024 May: Team Kenya, led by Merishaw School, represented Kenya at the Robofest event in Michigan.</li>
-                  </ul>
-                  <p>
-                    We extend our heartfelt gratitude to the host schools: Brookhouse Schools, Oshwal Mombasa, Aga Khan Kisumu, La Salle Homabay, Woodcreek School, International School of Kenya, Children's Garden, and Potterhouse School for their invaluable support and collaboration.
-                  </p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+      {/* Acknowledgment Section */}
+      <Container className="my-5">
+        <Card className="p-4 shadow-lg border-0 rounded">
+          <Card.Body>
+            <Card.Title className="text-center mb-4">Our Partner Schools</Card.Title>
+            <Card.Text className="text-center">
+              We sincerely appreciate the unwavering support and collaboration of our esteemed host schools.  
+              <br />
+              <strong>Brookhouse Schools, Oshwal Academy Mombasa, Aga Khan Kisumu, La Salle Homa Bay, Woodcreek School, International School of Kenya, Children's Garden, Potterhouse School, Sabis International School, and Merishaw School.</strong>  
+              <br /><br />
+              Your dedication to fostering STEM education and robotics innovation has been instrumental in shaping young minds and empowering the next generation of problem-solvers. We look forward to continued partnerships in **inspiring and equipping future innovators.**
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </Container>
     </div>
   );

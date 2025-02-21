@@ -1,47 +1,32 @@
-/* About.css */
-
-/* General styles for the About page */
 .about-page {
-  background-color: #f0f4f8;
-  padding: 3rem 0;
+  background-color: #f8f9fa; /* Light grey background */
+  padding-bottom: 50px;
 }
 
-h1.display-4 {
-  color: #343a40;
-  font-weight: 700;
+h1, h2 {
+  color: #1e2a38;
+  font-weight: bold;
 }
 
-p.lead {
-  color: #495057;
-  font-size: 1.25rem;
+.list-group-item {
+  font-size: 18px;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-left: 5px solid #007bff; /* Blue left border */
 }
 
-.text-muted {
-  color: #6c757d;
-}
-
-/* Card styling */
 .card {
-  border-radius: 0.5rem;
-  border: none;
-}
-
-.card.shadow-sm {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
+  font-size: 24px;
+  font-weight: bold;
   color: #007bff;
-  font-size: 1.5rem;
 }
 
-.card-text {
-  color: #495057;
-}
-
-/* Responsive layout adjustments */
-@media (max-width: 768px) {
-  .card {
-    margin-bottom: 1rem;
-  }
+.text-muted {
+  font-size: 18px;
 }

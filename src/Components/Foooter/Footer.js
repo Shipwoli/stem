@@ -9,7 +9,7 @@ const Footer = () => {
       <Container>
         <Row className="align-items-center">
           <Col md={6} className="footer-left">
-            <p>© 2024 Stemtrix. All rights reserved.</p>
+            <p>© 2025 Stemtrix. All rights reserved.</p>
           </Col>
           <Col md={6} className="footer-right text-md-right">
             <p className="mb-0">Follow us on:</p>

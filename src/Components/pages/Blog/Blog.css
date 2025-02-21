@@ -1,0 +1,20 @@
+.blog-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .blog-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .blog-img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .blog-date {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  

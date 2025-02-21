@@ -17,13 +17,13 @@
 }
 
 body {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 
 /* Logo styling with space from the border */
 .navbar-brand img {
-  height: 40px;
+  height: 100px;
 }
 
 /* Navigation links */
