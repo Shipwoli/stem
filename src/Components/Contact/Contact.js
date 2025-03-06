@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import emailjs from 'emailjs-com';
 import './Contact.css';
 
@@ -20,62 +21,82 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page">
+    <main className="contact-page">
+      <Helmet>
+        <title>Contact Stemtrix - Connect with Robotics & STEM Education Experts</title>
+        <meta
+          name="description"
+          content="Get in touch with Stemtrix, a leader in robotics education and STEM innovation. Fill out our contact form or use our contact details to reach us today."
+        />
+        <meta
+          name="keywords"
+          content="Stemtrix, Contact, Robotics Education, STEM, Contact Stemtrix, Email Stemtrix, Robotics, STEM Innovation"
+        />
+      </Helmet>
+
       <Container className="text-center my-5">
-        <h1>Contact Us</h1>
-        <p className="lead">We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+        <header>
+          <h1>Contact Us</h1>
+          <p className="lead">
+            We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.
+          </p>
+        </header>
       </Container>
 
       <Container>
         <Row>
           <Col md={6} className="mb-4">
-            <h4>Contact Information</h4>
-            <p><strong>Address:</strong> Owashika Road, Gate 238, Nairobi, Kenya</p>
-            <p><strong>Phone:</strong> +254 728 128353</p>
-            <p><strong>Email:</strong> stemtrix@gmail.com</p>
-            <div className="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.821077304485!2d36.76222617326074!3d-1.281063398706754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1bf084fdb2c3%3A0x3419f2185799f585!2sStemtrix%20East%20Africa!5e0!3m2!1sen!2ske!4v1723544421306!5m2!1sen!2ske" 
-                height="350"
-                width="600"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                title="Google Maps Location"
-              ></iframe>
-            </div>
+            <section>
+              <h4>Contact Information</h4>
+              <p><strong>Address:</strong> Owashika Road, Gate 238, Nairobi, Kenya</p>
+              <p><strong>Phone:</strong> +254 728 128353</p>
+              <p><strong>Email:</strong> stemtrix@gmail.com</p>
+              <div className="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.821077304485!2d36.76222617326074!3d-1.281063398706754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1bf084fdb2c3%3A0x3419f2185799f585!2sStemtrix%20East%20Africa!5e0!3m2!1sen!2ske!4v1723544421306!5m2!1sen!2ske" 
+                  height="350"
+                  width="600"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  title="Stemtrix Location on Google Maps"
+                ></iframe>
+              </div>
+            </section>
           </Col>
           <Col md={6}>
-            {status.message && <Alert variant={status.variant}>{status.message}</Alert>}
-            <Form ref={form} onSubmit={sendEmail}>
-              <Form.Group controlId="formName" className="mb-3">
-                <Form.Label>Your Name</Form.Label>
-                <Form.Control type="text" name="user_name" placeholder="Enter your name" required />
-              </Form.Group>
+            <section>
+              {status.message && <Alert variant={status.variant}>{status.message}</Alert>}
+              <Form ref={form} onSubmit={sendEmail}>
+                <Form.Group controlId="formName" className="mb-3">
+                  <Form.Label>Your Name</Form.Label>
+                  <Form.Control type="text" name="user_name" placeholder="Enter your name" required />
+                </Form.Group>
 
-              <Form.Group controlId="formEmail" className="mb-3">
-                <Form.Label>Your Email</Form.Label>
-                <Form.Control type="email" name="user_email" placeholder="Enter your email" required />
-              </Form.Group>
+                <Form.Group controlId="formEmail" className="mb-3">
+                  <Form.Label>Your Email</Form.Label>
+                  <Form.Control type="email" name="user_email" placeholder="Enter your email" required />
+                </Form.Group>
 
-              <Form.Group controlId="formSubject" className="mb-3">
-                <Form.Label>Subject</Form.Label>
-                <Form.Control type="text" name="subject" placeholder="Enter subject" />
-              </Form.Group>
+                <Form.Group controlId="formSubject" className="mb-3">
+                  <Form.Label>Subject</Form.Label>
+                  <Form.Control type="text" name="subject" placeholder="Enter subject" />
+                </Form.Group>
 
-              <Form.Group controlId="formMessage" className="mb-3">
-                <Form.Label>Your Message</Form.Label>
-                <Form.Control as="textarea" name="message" rows={5} placeholder="Enter your message" required />
-              </Form.Group>
+                <Form.Group controlId="formMessage" className="mb-3">
+                  <Form.Label>Your Message</Form.Label>
+                  <Form.Control as="textarea" name="message" rows={5} placeholder="Enter your message" required />
+                </Form.Group>
 
-              <Button variant="primary" type="submit">
-                Send Message
-              </Button>
-            </Form>
+                <Button variant="primary" type="submit">
+                  Send Message
+                </Button>
+              </Form>
+            </section>
           </Col>
         </Row>
       </Container>
-    </div>
+    </main>
   );
 };
 

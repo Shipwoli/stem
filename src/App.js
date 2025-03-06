@@ -16,8 +16,7 @@ import MobileRoboticsLab from "./Components/pages/Mobilerobotics";
 import RoboticsTournament from "./Components/pages/Tournament";
 import Services from "./Components/Services/Service";
 import Sign from "./Components/pages/SIgin/Sign";
-import Blog from "./Components/pages/Blog/Blog";
-import BlogDetails from "./Components/pages/Blog/BlogDetails";
+
 
 function App() {
   return (
@@ -36,12 +35,11 @@ function App() {
         <Route path="/robotics-tournament" element={<RoboticsTournament />} />
         <Route path="/service" element={<Services />} />
         <Route path="/join-us" element={<Sign/>} />
-        <Route path="/stem" element={<Blog/>} />
-        <Route path="/blog/:id" element={<BlogDetails/>} />
+      
 
       </Routes>
       </main>
-      <Footer /> {/* Add the Footer component here */}
+      <Footer/> {/* Add the Footer component here */}
 
     </Router>
   );
