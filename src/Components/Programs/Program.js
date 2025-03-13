@@ -1,219 +1,158 @@
-import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
-import legoRoboticsImg from './assets/ev.jpeg';
-import legoJuniorImg from './assets/wedo3.jpeg';
-import designEngineeringImg from './assets/design.jpeg';
-import legoMakersImg from './assets/makers.jpg';
-import scratchImg from './assets/scratch.jpeg';
-import arduinoImg from './assets/Arduino.jpeg';
-import pythonImg from './assets/python.jpeg';
-import './Program.css'; // Ensure to style this CSS file
+import React from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { Helmet } from "react-helmet";
+import roboticsImg from "./assets/ev.jpeg";
+import wedoImg from "./assets/wedo.jpg";
+import codingImg from "./assets/scratch.jpeg";
+import arduinoImg from "./assets/arduino.jpg";
+import programmingImg from "./assets/python.jpeg";
+import storytellingImg from "./assets/story.jpeg";
+import powerMachineImg from "./assets/power.jpeg";
+import architectureImg from "./assets/design.jpeg";
+import "./Program.css";
+
+const programsData = [
+  {
+    title: "Advanced Robotics",
+    age: "10-17 years",
+    img: roboticsImg,
+    description:
+      "Develop hands-on skills in designing, building, and programming robots using advanced robotics kits.",
+    highlights: [
+      "Build and program robots with Mindstorms EV3 & Spike Prime.",
+      "Explore Arduino programming and electronic circuits.",
+      "Learn Python coding for automation and robotics.",
+    ],
+  },
+  {
+    title: "Arduino Programming",
+    img: arduinoImg,
+    description:
+      "Learn to program microcontrollers, integrate sensors, and automate systems using Arduino kits.",
+    highlights: [
+      "Understand circuits and components.",
+      "Write and execute Arduino code.",
+      "Design functional electronic prototypes.",
+    ],
+  },
+  {
+    title: "Python Coding",
+    img: programmingImg,
+    description:
+      "Master the fundamentals of Python programming and apply it to real-world automation and robotics projects.",
+    highlights: [
+      "Learn Python syntax and logic.",
+      "Write scripts for automation and problem-solving.",
+      "Develop interactive applications and projects.",
+    ],
+  },
+  {
+    title: "Junior Robotics",
+    age: "4-9 years",
+    img: wedoImg,
+    description:
+      "Introduce young learners to robotics through fun, interactive WeDo 2.0 projects.",
+    highlights: [
+      "Build and program simple robots.",
+      "Learn basic engineering and automation concepts.",
+      "Enhance creativity and problem-solving skills.",
+    ],
+  },
+  {
+    title: "Simple Machines & Engineering",
+    img: powerMachineImg,
+    description:
+      "Explore basic mechanical concepts by constructing simple machines like gears, pulleys, and levers.",
+    highlights: [
+      "Create moving models such as cars, cranes, and lifts.",
+      "Understand energy transfer and motion principles.",
+      "Develop teamwork and critical thinking skills.",
+    ],
+  },
+  {
+    title: "Design Engineering & Architecture",
+    img: architectureImg,
+    description:
+      "Encourage creativity by designing and constructing real-world structures like bridges, buildings, and cities.",
+    highlights: [
+      "Plan and construct architectural models.",
+      "Learn about stability and design principles.",
+      "Engage in engineering challenges.",
+    ],
+  },
+  {
+    title: "Robotics Through Storytelling",
+    img: storytellingImg,
+    description:
+      "Make learning fun by combining storytelling with robotics to bring characters and ideas to life.",
+    highlights: [
+      "Enhance creativity with hands-on storytelling.",
+      "Develop communication and teamwork skills.",
+      "Use robotics to animate engaging narratives.",
+    ],
+  },
+  {
+    title: "Game & Animation Coding",
+    age: "6+ years",
+    img: codingImg,
+    description:
+      "Learn to code through game development and animation projects using Scratch and other beginner-friendly tools.",
+    highlights: [
+      "Create interactive games and animations.",
+      "Understand programming logic and problem-solving.",
+      "Develop creative thinking and storytelling skills.",
+    ],
+  },
+];
 
 const Programs = () => {
   return (
     <main className="programs-page">
       <Helmet>
-        <title>Our Programs - Stemtrix Robotics & STEM Education Programs</title>
+        <title>Our STEM Programs - Hands-on Learning</title>
         <meta
           name="description"
-          content="Discover Stemtrix's diverse range of robotics and STEM programs designed to empower the next generation of innovators. Explore our Lego Robotics, Lego Robotics Junior, Design Engineering, Lego Makers, Scratch, Arduino, and Python programs."
-        />
-        <meta
-          name="keywords"
-          content="Stemtrix, Robotics Programs, STEM Education, Lego Robotics, Lego Robotics Junior, Design Engineering, Lego Makers, Scratch Program, Arduino, Python, Coding for Kids, Hands-on Learning, Robotics Education, STEAM, Innovative Learning"
+          content="Explore our range of hands-on STEM programs designed to build creativity, problem-solving, and technical skills in young learners."
         />
       </Helmet>
 
+      {/* Page Header */}
       <Container className="text-center my-5">
         <header>
-          <h1 className="display-4 glow-heading">Our Programs</h1>
-          <p className="lead">
-            Empowering the next generation through hands-on learning in robotics and programming.
-          </p>
+          <h1 className="display-4 glow-heading">Explore Our STEM Programs</h1>
+          <p className="lead">Innovative learning through robotics, coding, and engineering.</p>
         </header>
       </Container>
 
+      {/* Programs Section */}
       <section className="programs-section my-5">
         <Container>
           <Row className="g-4">
-            <Col md={6}>
-              <Card className="h-100">
-                <div className="card-img-wrapper">
-                  <Card.Img
-                    src={legoRoboticsImg}
-                    alt="Lego Robotics using EV3 Mindstorms"
-                    className="program-img"
-                  />
-                </div>
-                <Card.Body>
-                  <h3>Lego Robotics</h3>
-                  <p>
-                    <strong>Products Used:</strong> EV3 Mindstorms
-                  </p>
-                  <p>
-                    <strong>Age Group:</strong> 10-16 years
-                  </p>
-                  <p>
-                    <strong>Description:</strong> Students engage in robot design, coding, and participate in robotics tournaments that challenge their creativity and problem-solving skills.
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col md={6}>
-              <Card className="h-100">
-                <div className="card-img-wrapper">
-                  <Card.Img
-                    src={legoJuniorImg}
-                    alt="Lego Robotics Junior using WeDo 2.0 and Power Machine"
-                    className="program-img"
-                  />
-                </div>
-                <Card.Body>
-                  <h3>Lego Robotics Junior</h3>
-                  <p>
-                    <strong>Products Used:</strong> WeDo 2.0, Power Machine
-                  </p>
-                  <p>
-                    <strong>Age Group:</strong> 6-9 years
-                  </p>
-                  <p>
-                    <strong>Description:</strong>
-                  </p>
-                  <ul>
-                    <li>Simple robot designs</li>
-                    <li>Simple Machines</li>
-                  </ul>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-
-          <Row className="g-4 mt-4">
-            <Col md={6}>
-              <Card className="h-100">
-                <div className="card-img-wrapper">
-                  <Card.Img
-                    src={designEngineeringImg}
-                    alt="Design Engineering using LEGO Designs"
-                    className="program-img"
-                  />
-                </div>
-                <Card.Body>
-                  <h3>Design Engineering</h3>
-                  <p>
-                    <strong>Products Used:</strong> LEGO Designs
-                  </p>
-                  <p>
-                    <strong>Age Group:</strong> 10-16 years
-                  </p>
-                  <p>
-                    <strong>Description:</strong> Architectural designs using Lego and other non-lego materials. Example: Buildings, home planning, factories, airplanes, etc.
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col md={6}>
-              <Card className="h-100">
-                <div className="card-img-wrapper">
-                  <Card.Img
-                    src={legoMakersImg}
-                    alt="Lego Makers program for early creative learning"
-                    className="program-img"
-                  />
-                </div>
-                <Card.Body>
-                  <h3>Lego Makers</h3>
-                  <p>
-                    <strong>Products Used:</strong> LEGO Designs
-                  </p>
-                  <p>
-                    <strong>Age Group:</strong> 3-5 years
-                  </p>
-                  <p>
-                    <strong>Description:</strong> Storytelling through design building.
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-
-          <Row className="g-4 mt-4">
-            <Col md={6}>
-              <Card className="h-100">
-                <div className="card-img-wrapper">
-                  <Card.Img
-                    src={scratchImg}
-                    alt="Scratch Program for kids learning coding"
-                    className="program-img"
-                  />
-                </div>
-                <Card.Body>
-                  <h3>Scratch Program</h3>
-                  <p>
-                    <strong>Products Used:</strong> Scratch
-                  </p>
-                  <p>
-                    <strong>Age Group:</strong> 6+ years
-                  </p>
-                  <p>
-                    <strong>Description:</strong> Students learn the basics of coding through Scratch, a visual programming language that makes it easy to create games, animations, and interactive stories.
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col md={6}>
-              <Card className="h-100">
-                <div className="card-img-wrapper">
-                  <Card.Img
-                    src={arduinoImg}
-                    alt="Arduino Kit Program for electronics and coding"
-                    className="program-img"
-                  />
-                </div>
-                <Card.Body>
-                  <h3>Arduino</h3>
-                  <p>
-                    <strong>Products Used:</strong> Arduino Kit
-                  </p>
-                  <p>
-                    <strong>Age Group:</strong> 13+ years
-                  </p>
-                  <p>
-                    <strong>Description:</strong> Students learn to build and program electronic devices using Arduino, fostering a deep understanding of electronics and coding.
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-
-          <Row className="g-4 mt-4">
-            <Col md={6} className="mx-auto">
-              <Card className="h-100">
-                <div className="card-img-wrapper">
-                  <Card.Img
-                    src={pythonImg}
-                    alt="Python programming course for beginners"
-                    className="program-img"
-                  />
-                </div>
-                <Card.Body>
-                  <h3>Python</h3>
-                  <p>
-                    <strong>Products Used:</strong> Python.org
-                  </p>
-                  <p>
-                    <strong>Age Group:</strong> 12+ years
-                  </p>
-                  <p>
-                    <strong>Description:</strong> A beginner-friendly introduction to one of the most popular programming languages, Python. Students learn coding concepts and create real-world projects.
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
+            {programsData.map((program, index) => (
+              <Col key={index} md={6} lg={4}>
+                <Card className="h-100 shadow-lg border-0">
+                  <div className="card-img-wrapper">
+                    <Card.Img
+                      src={program.img}
+                      alt={program.title}
+                      className="program-img rounded-top"
+                    />
+                  </div>
+                  <Card.Body className="text-center">
+                    <h3 className="fw-bold">{program.title}</h3>
+                    {program.age && <p><strong>Age Group:</strong> {program.age}</p>}
+                    <p>{program.description}</p>
+                    {program.highlights && (
+                      <ul className="text-start">
+                        {program.highlights.map((highlight, i) => (
+                          <li key={i}>{highlight}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>

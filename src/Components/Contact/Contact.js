@@ -65,7 +65,7 @@ const Contact = () => {
             </section>
           </Col>
           <Col md={6}>
-            <section>
+            <section className="contact-form p-4 shadow rounded bg-light">
               {status.message && <Alert variant={status.variant}>{status.message}</Alert>}
               <Form ref={form} onSubmit={sendEmail}>
                 <Form.Group controlId="formName" className="mb-3">
@@ -78,6 +78,11 @@ const Contact = () => {
                   <Form.Control type="email" name="user_email" placeholder="Enter your email" required />
                 </Form.Group>
 
+                <Form.Group controlId="formPhone" className="mb-3">
+                  <Form.Label>Your Phone Number</Form.Label>
+                  <Form.Control type="tel" name="user_phone" placeholder="Enter your phone number" required />
+                </Form.Group>
+
                 <Form.Group controlId="formSubject" className="mb-3">
                   <Form.Label>Subject</Form.Label>
                   <Form.Control type="text" name="subject" placeholder="Enter subject" />
@@ -88,7 +93,7 @@ const Contact = () => {
                   <Form.Control as="textarea" name="message" rows={5} placeholder="Enter your message" required />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className="w-100">
                   Send Message
                 </Button>
               </Form>
