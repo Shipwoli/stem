@@ -1,115 +1,313 @@
-/* General section styling */
-.services-section {
-  
-  background-color: #f9f9f9;
+/* Hero Banner Styles */
+.hero-banner {
+  background: linear-gradient(135deg, #1e5799 0%, #207cca 35%, #2989d8 50%, #7db9e8 100%);
+  padding: 80px 0;
+  margin-bottom: 30px;
+  border-radius: 0 0 50% 50% / 15%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Add spacing between services */
-.service-block {
-  padding: 50px 20px;
-  border-radius: 12px;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Alternating background colors for better separation */
-.service-block:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-.service-block:nth-child(even) {
-  background-color: #eef5ff;
-}
-
-/* Elevate service block slightly on hover */
-.service-block:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Image styling */
-.service-block .img-container {
-  text-align: center;
+.hero-banner h1 {
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.service-block .img-fluid {
-  width: 100%;
-  height: auto;
+/* Service Card Styles */
+.service-card {
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-bottom: 60px;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Subtle zoom effect on hover */
-.service-block .img-fluid:hover {
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.service-image {
+  transition: transform 0.6s ease;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.service-card:hover .service-image {
   transform: scale(1.05);
 }
 
-/* Text Styling */
-.service-block h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
-  text-align: center;
+.service-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
-.service-block p {
+.service-content {
+  padding: 30px;
+}
+
+.service-title {
+  color: #2b2d42;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  position: relative;
+}
+
+.service-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #00e5ff);
+}
+
+.service-description {
   font-size: 1.1rem;
   color: #555;
-  line-height: 1.6;
-  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 25px;
 }
 
-/* Center the button */
-.service-block .btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+.service-button {
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
 }
 
-/* Button Styling */
-.service-block .btn-primary {
-  background-color: #007bff;
+.service-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* CTA Section - Enhanced Fancy Version */
+.cta-section {
+  background: linear-gradient(135deg, rgba(41, 0, 102, 0.9) 0%, rgba(80, 19, 195, 0.85) 50%, rgba(0, 80, 255, 0.8) 100%), 
+              url('wedo.png');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+/* Animated background elements */
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10.5%) 0 0,
+              radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10.5%) 25px 25px;
+  background-size: 50px 50px;
+  animation: ctaBackgroundAnim 60s linear infinite;
+  opacity: 0.3;
+}
+
+.cta-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: skewX(-15deg);
+  animation: ctaGlowAnim 8s ease-in-out infinite;
+}
+
+@keyframes ctaBackgroundAnim {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50px, -50px) rotate(360deg);
+  }
+}
+
+@keyframes ctaGlowAnim {
+  0%, 100% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+
+.cta-section h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to right, #ffffff, #e0e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.cta-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #00e5ff, #2979ff);
+  border-radius: 2px;
+}
+
+.cta-section p {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-section .btn-success {
+  background: linear-gradient(45deg, #00c853, #00e676);
   border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 
+              0 0 0 5px rgba(0, 230, 118, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.service-block .btn-primary:hover {
-  background-color: #0056b3;
+.cta-section .btn-success::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
 }
 
-/* Responsive Styles */
+.cta-section .btn-success:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3), 
+              0 0 0 8px rgba(0, 230, 118, 0.3);
+}
+
+.cta-section .btn-success:hover::before {
+  left: 100%;
+}
+
+/* Floating shapes for added visual interest */
+.cta-section .shape {
+  position: absolute;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.cta-section .shape-1 {
+  top: 10%;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ff4081;
+  animation: floatAnimation 8s ease-in-out infinite;
+}
+
+.cta-section .shape-2 {
+  bottom: 15%;
+  right: 8%;
+  width: 120px;
+  height: 120px;
+  background: #00e5ff;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: floatAnimation 9s ease-in-out infinite 1s;
+}
+
+.cta-section .shape-3 {
+  top: 60%;
+  left: 10%;
+  width: 60px;
+  height: 60px;
+  background: #ffeb3b;
+  border-radius: 30% 70% 50% 50% / 50%;
+  animation: floatAnimation 7s ease-in-out infinite 0.5s;
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
-  .service-block {
-    padding: 40px 15px;
+  .cta-section {
+    padding: 70px 20px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
-
-  .service-block h3 {
-    font-size: 1.5rem;
+  
+  .cta-section h2 {
+    font-size: 2.2rem;
   }
-
-  .service-block p {
-    font-size: 1rem;
+  
+  .cta-section p {
+    font-size: 1.1rem;
   }
-
-  .service-block .btn-primary {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-
-
-.services-section .service-block {
-  background: #f8f9fa; /* Light grey background */
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50px; /* More spacing between sections */
 }
-.services-section h3 {
-  color: #007bff; /* Bootstrap primary blue */
-}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .service-card {
+    margin-bottom: 30px;
+  }
+  
+  .service-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-banner {
+    padding: 50px 0;
+  }
+  
+  .service-image {
+    height: 300px;
+  }
 }

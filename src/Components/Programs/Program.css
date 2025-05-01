@@ -1,0 +1,241 @@
+/* Program.css */
+
+/* General Styles */
+.programs-page {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    padding: 80px 0;
+    margin-bottom: 40px;
+  }
+  
+  .hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .divider {
+    height: 4px;
+    width: 80px;
+    background-color: #ffc107;
+    border-radius: 2px;
+  }
+  
+  /* Category Filters */
+  .category-filters {
+    margin-bottom: 40px;
+  }
+  
+  .filter-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background-color: #e9ecef;
+  }
+  
+  .filter-btn.active {
+    background-color: #4b6cb7;
+    color: white;
+    border-color: #4b6cb7;
+  }
+  
+  /* Program Cards */
+  .program-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .card-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+  }
+  
+  .program-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .program-card:hover .program-img {
+    transform: scale(1.05);
+  }
+  
+  .category-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    background-color: #4b6cb7;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #182848;
+    margin-bottom: 12px;
+  }
+  
+  .age-range {
+    font-size: 0.9rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .age-icon {
+    margin-right: 5px;
+    font-size: 1.1rem;
+  }
+  
+  .program-description {
+    color: #495057;
+    margin-bottom: 20px;
+  }
+  
+  .highlights-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #182848;
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 8px;
+  }
+  
+  .highlights-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #ffc107;
+  }
+  
+  .highlights-list {
+    padding-left: 20px;
+  }
+  
+  .highlights-list li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 5px;
+  }
+  
+  .highlights-list li:before {
+    content: '•';
+    color: #4b6cb7;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  .card-footer {
+    padding: 15px 20px;
+  }
+  
+  .card-footer .btn-primary {
+    background-color: #4b6cb7;
+    border-color: #4b6cb7;
+    transition: all 0.3s ease;
+  }
+  
+  .card-footer .btn-primary:hover {
+    background-color: #3a5998;
+    border-color: #3a5998;
+  }
+  
+  /* Enhanced CTA Section */
+.cta-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    border-radius: 12px;
+    margin: 60px 20px;
+    position: relative;  /* Create stacking context */
+    z-index: 1;         /* Ensure it's above other content */
+  }
+  
+  .cta-section h2 {
+    font-weight: 700;
+    color: #182848;
+  }
+  
+  /* Button styles with enhanced clickability */
+  .btn {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  .btn-primary {
+    background-color: #4b6cb7;
+    border-color: #4b6cb7;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover, 
+  .btn-primary:focus {
+    background-color: #3a5998;
+    border-color: #3a5998;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-outline-primary {
+    color: #4b6cb7;
+    border-color: #4b6cb7;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover,
+  .btn-outline-primary:focus {
+    background-color: #4b6cb7;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+    
+    .card-img-container {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+    
+    .filter-btn {
+      margin-bottom: 10px;
+    }
+  }

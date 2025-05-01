@@ -1,184 +1,242 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import tournamentImg from './assets/tournament2.jpeg'; 
-import './RoboticsTournament.css'; 
-import robofest from './assets/robofest.png'
+import tournamentImg from './assets/tournament2.jpeg';
+import robofest from './assets/robofest.png';
 import iro from './assets/irlc.png';
-import Inspire from './assets/inspire.jpeg'
-
+import inspire from './assets/inspire.jpeg';
+import './RoboticsTournament.css';
+import { Link } from 'react-router-dom';
 
 const RoboticsTournament = () => {
   return (
-    <div className="robotics-tournament-page">
-      <Container className="text-center my-5">
-        <h1 className="display-4 glow-heading">Robotics Tournament</h1>
-        <p className="lead">Inspiring Future Innovators Since 2017</p>
-      </Container>
+    <div className="robotics-page">
+      {/* Modern Hero Section */}
+      <div className="hero">
+        <Container>
+          <div className="hero-content">
+            <h1>Robotics Tournament</h1>
+            <p>Inspiring Future Innovators Since 2017</p>
+            <Link to="/join-us">
+            <Button className="primary-btn">Get Involved</Button>
+            </Link>
+          </div>
+        </Container>
+      </div>
 
-      <Container className="tournament-section my-5">
-        <Row className="align-items-center">
-          <Col md={6}>
-            <Card.Img src={tournamentImg} className="img-fluid tournament-img" />
-          </Col>
-          <Col md={6}>
-            <h3>Empowering Students Through Robotics</h3>
+      {/* About Section */}
+      <section className="about-section">
+        <Container>
+          <div className="section-header">
+            <h2>Empowering Students Through Robotics</h2>
+          </div>
+          <Row className="align-items-center">
+            <Col lg={6} className="order-lg-2">
+              <div className="about-image">
+                <img src={tournamentImg} alt="Students with robots" className="img-fluid" />
+              </div>
+            </Col>
+            <Col lg={6} className="order-lg-1">
+              <div className="about-content">
+                <p>
+                  Since 2017, we have engaged schools in various robotics tournaments, both regional and international. These events
+                  bring students and teachers together to share learning experiences through robot design, robot games, and project presentations.
+                </p>
+                <p>
+                  Supported by industry players and experts, these tournaments provide mentorship and real-life experience on the implementation of
+                  student-developed solutions. Students aged 6-17 showcase their innovative solutions and share their skills in a fun and collaborative environment.
+                </p>
+                <div className="stats-row">
+                  <div className="stat-item">
+                    <div className="stat-number">7+</div>
+                    <div className="stat-label">Years</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="stat-number">5000+</div>
+                    <div className="stat-label">Students</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="stat-number">50+</div>
+                    <div className="stat-label">Schools</div>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Inspire Challenge Section */}
+      <section className="inspire-section">
+        <Container>
+          <div className="inspire-header">
+            <img src={inspire} alt="Inspire Robotics Logo" className="inspire-logo" />
+            <h2>Inspire Robotics Challenge</h2>
+            <p>A regional robotics competition organized by Stemtrix East Africa</p>
+          </div>
+          
+          <div className="inspire-content">
             <p>
-              Since 2017, we have engaged schools in various robotics tournaments, both regional and international. These events
-              bring students and teachers together to share learning experiences through robot design, robot games, and project presentations.
+              The Inspire Robotics Challenge is a fun-filled regional competition that brings together students aged 4 to 17 to share, compete, and learn from each other's experiences.
             </p>
             <p>
-              Supported by industry players and experts, these tournaments provide mentorship and real-life experience on the implementation of
-              student-developed solutions. Students aged 6-17 showcase their innovative solutions and share their skills in a fun and collaborative environment.
+              Students are challenged to think logically and in teams to develop solutions across three age categories: Explore (6-9 years), Challenge (10-13 years), and Innovators (14-17 years).
             </p>
-          </Col>
-        </Row>
-      </Container>
-
-
-      <Container className="inspire-challenge-section my-5 py-4">
-  <Row className="justify-content-center">
-    <Col md={2} className="text-center">
-      <img src={Inspire} alt="Inspire Robotics Logo" className="inspire-logo mb-3" />
-    </Col>
-    <Col md={8} className="text-center">
-      <h3 className="section-title">Inspire Robotics Challenge</h3>
-      <p className="section-subtitle">A regional robotics competition organized by Stemtrix East Africa</p>
-    </Col>
-  </Row>
-
-  <Row className="align-items-center mt-4">
-    <Col md={12}>
-      <h4 className="content-title">About Inspire Robotics Challenge</h4>
-      <p className="content-description">
-        The Inspire Robotics Challenge is a fun-filled regional competition that brings together students aged 4 to 17 to share, compete, and learn from each other's experiences.
-      </p>
-      <p className="content-description">
-        Students are challenged to think logically and in teams to develop solutions across three age categories: Explore (6-9 years), Challenge (10-13 years), and Innovators (14-17 years).
-      </p>
-      <p className="content-description">
-        The program focuses on four key areas: core values, project research, robot design, and presentation, fostering creativity and long-term friendships through shared learning.
-      </p>
-      <p className="key-pillars-title"><strong>Key Pillars:</strong></p>
-      <ul className="key-pillars-list">
-        <li><strong>Core Values:</strong> Fun, respect, discovery, and impact</li>
-        <li><strong>Research Problem:</strong> Prototype development and sharing findings</li>
-        <li><strong>Robot Design and Game:</strong> Designing autonomous robots for challenges</li>
-        <li><strong>Presentation:</strong> Showcasing work with clarity and precision</li>
-      </ul>
-    </Col>
-  </Row>
-</Container>
-<Container className="international-events-section mb-5">
-  <h3 className="text-center section-title">Our International Robotics Events</h3>
-  <Row className="my-5">
-    <Col md={6} className="text-center event-col">
-      <h4 className="event-title">Robofest</h4>
-      <p className="event-description">
-        Hosted by Lawrence Technological University in Southfield, MI, Robofest is a festival of competitions encouraging students to learn STEAM and Computer Science principles through autonomous robot design and programming.
-      </p>
-      <Card.Img src={robofest} className="img-fluid tournament-img event-img" />
-    </Col>
-    <Col md={6} className="text-center event-col">
-      <h4 className="event-title">International Robot Olympiad Committee</h4>
-      <p className="event-description">
-        An annual international youth robot sports competition, held by various member countries, nurturing potential leaders in future-oriented robot technology.
-      </p>
-      <Card.Img src={iro} className="img-fluid tournament-img event-img" />
-    </Col>
-  </Row>
-</Container>
-
-
-
-<Container className="past-events-section my-5">
-  <h3 className="text-center">Past Events</h3>
-
-  <Row className="my-5">
-    <Col md={6}>
-      <Card className="event-card">
-        <Card.Body>
-          <Card.Title>Homabay Edition</Card.Title>
-          <p>Theme: Community Upgrade - Hosted at Lasalle School, Homabay</p>
-          <div className="video-responsive">
-            <iframe
-              src="https://www.youtube.com/embed/k6wVvh5T-_4"
-              title="Homabay Edition"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+            
+            <h3>Key Pillars</h3>
+            <div className="pillars-container">
+              <div className="pillar-item">
+                <div className="pillar-icon">CV</div>
+                <h4>Core Values</h4>
+                <p>Fun, respect, discovery, and impact</p>
+              </div>
+              <div className="pillar-item">
+                <div className="pillar-icon">RP</div>
+                <h4>Research Problem</h4>
+                <p>Prototype development and sharing findings</p>
+              </div>
+              <div className="pillar-item">
+                <div className="pillar-icon">RD</div>
+                <h4>Robot Design</h4>
+                <p>Designing autonomous robots for challenges</p>
+              </div>
+              <div className="pillar-item">
+                <div className="pillar-icon">PR</div>
+                <h4>Presentation</h4>
+                <p>Showcasing work with clarity and precision</p>
+              </div>
+            </div>
           </div>
-        </Card.Body>
-      </Card>
-    </Col>
-    
-    <Col md={6}>
-      <Card className="event-card">
-        <Card.Body>
-          <Card.Title>Masterpiece, Season 2023/2024 </Card.Title>
-          <p><b>Theme: Masterpiece:</b> Teams imagining and innovating new ways to create and communicate art across the globe. Using their imagination to re-think the world of arts!</p>
-          <div className="video-responsive">
-          <iframe
-  src="https://www.youtube.com/embed/qrz-hAlR5j0"
-  title="Masterpiece 2023/2024"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-></iframe>
+        </Container>
+      </section>
 
-
+      {/* International Events Section */}
+      <section className="events-section">
+        <Container>
+          <div className="section-header">
+            <h2>Our International Robotics Events</h2>
           </div>
-        </Card.Body>
-      </Card>
-    </Col>
-  </Row>
+          
+          <Row>
+            <Col md={6}>
+              <div className="event-card">
+                <div className="event-image">
+                  <img src={robofest} alt="Robofest" />
+                </div>
+                <div className="event-content">
+                  <h3>Robofest</h3>
+                  <p>
+                    Hosted by Lawrence Technological University in Southfield, MI, Robofest is a festival of competitions encouraging students to learn STEAM and Computer Science principles through autonomous robot design and programming.
+                  </p>
+                  <Button className="outline-btn">Learn More</Button>
+                </div>
+              </div>
+            </Col>
+            
+            <Col md={6}>
+              <div className="event-card">
+                <div className="event-image">
+                  <img src={iro} alt="International Robot Olympiad" />
+                </div>
+                <div className="event-content">
+                  <h3>International Robot Olympiad</h3>
+                  <p>
+                    An annual international youth robot sports competition, held by various member countries, nurturing potential leaders in future-oriented robot technology.
+                  </p>
+                  <Button className="outline-btn">Learn More</Button>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
-  <Row className="my-5">
-    <Col md={6}>
-      <Card className="event-card">
-        <Card.Body>
-          <Card.Title>Nairobi Edition</Card.Title>
-          <p>Theme: Food - Reviewing food chain processes and solutions</p>
-          <div className="video-responsive">
-          <iframe
-  src="https://www.youtube.com/embed/cfNnN_UxdpQ"
-  title="Nairobi Edition"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-></iframe>
-
+      {/* Past Events Section */}
+      <section className="past-events-section">
+        <Container>
+          <div className="section-header">
+            <h2>Past Events</h2>
           </div>
-          <Button variant="link" href="https://drive.google.com/drive/u/0/shared-with-me" target="_blank">View Gallery</Button>
-        </Card.Body>
-      </Card>
-    </Col>
-
-    <Col md={6}>
-      <Card className="event-card">
-        <Card.Body>
-          <Card.Title>Mombasa Edition</Card.Title>
-          <p>Theme: Innovation - Hosted in Mombasa</p>
-          <div className="video-responsive">
-            <iframe
-              src="https://www.youtube.com/embed/example4"
-              title="Mombasa Edition"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+          
+          <div className="video-grid">
+            <div className="video-item">
+              <h4>Homabay Edition</h4>
+              <p>Theme: Community Upgrade - Hosted at Lasalle School, Homabay</p>
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/k6wVvh5T-_4"
+                  title="Homabay Edition"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+            
+            <div className="video-item">
+              <h4>Masterpiece, Season 2023/2024</h4>
+              <p><strong>Theme: Masterpiece:</strong> Teams imagining and innovating new ways to create and communicate art across the globe.</p>
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/qrz-hAlR5j0"
+                  title="Masterpiece 2023/2024"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+            
+            <div className="video-item">
+              <h4>Nairobi Edition</h4>
+              <p>Theme: Food - Reviewing food chain processes and solutions</p>
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/cfNnN_UxdpQ"
+                  title="Nairobi Edition"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <Button variant="link" className="gallery-link" href="https://drive.google.com/drive/u/0/shared-with-me" target="_blank">View Gallery</Button>
+            </div>
+            
+            <div className="video-item">
+              <h4>Mombasa Edition</h4>
+              <p>Theme: Innovation - Hosted in Mombasa</p>
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/example4"
+                  title="Mombasa Edition"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
           </div>
-        </Card.Body>
-      </Card>
-    </Col>
-  </Row>
-</Container>
+          
+          {/* <div className="text-center mt-5">
+            <Button className="primary-btn">View All Events</Button>
+          </div> */}
+        </Container>
+      </section>
 
-
-      <Container className="contact-section text-center my-5">
-        <h4>Want to Participate in Our Robotics Tournaments?</h4>
-        <p>Email us at <a href="mailto:stemtrix@gmail.com">stemtrix@gmail.com</a> or call: +254728 128 353 / +254753 128 353 / +25411039440</p>
-      </Container>
+      {/* Contact Section */}
+      <section className="contact-section">
+        <Container>
+          <div className="contact-container">
+            <div className="contact-content">
+              <h2>Want to Participate?</h2>
+              <p>Email us at <a href="mailto:stemtrix@gmail.com">stemtrix@gmail.com</a></p>
+              <p>Call: +254728 128 353 / +254753 128 353 / +25411039440</p>
+              <Link to="/join-us">
+              <Button className="primary-btn">Register Now</Button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
     </div>
   );
 };

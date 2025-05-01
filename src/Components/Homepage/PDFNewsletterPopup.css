@@ -1,0 +1,139 @@
+/* PDFNewsletterPopup.css */
+.pdf-newsletter-modal .modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .pdf-newsletter-popup {
+    position: relative;
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  .popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .popup-close:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .popup-header {
+    background: linear-gradient(135deg, #4a90e2, #1e3c72);
+    color: #fff;
+    padding: 25px 30px;
+    text-align: center;
+  }
+  
+  .popup-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .popup-header h2 {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .popup-header p {
+    opacity: 0.9;
+    margin-bottom: 0;
+  }
+  
+  .pdf-preview {
+    padding: 0;
+    height: 450px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .pdf-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .popup-footer {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .download-btn {
+    padding: 10px 20px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #4a90e2, #1e3c72);
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+  }
+  
+  .download-link {
+    text-decoration: none;
+  }
+  
+  /* Animation for popup appearance */
+  .modal.show .modal-dialog {
+    animation: popupFadeIn 0.4s ease-out forwards;
+  }
+  
+  @keyframes popupFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .pdf-preview {
+      height: 350px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .pdf-preview {
+      height: 300px;
+    }
+    
+    .popup-footer {
+      flex-direction: column;
+    }
+    
+    .popup-footer .btn {
+      width: 100%;
+    }
+  }
