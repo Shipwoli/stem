@@ -4,50 +4,57 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
 import logo from './logo2.png';
 
+const NAV_LINKS = [
+  { to: '/', label: 'Home', exact: true },
+  { to: '/service', label: 'Services' },
+  { to: '/about', label: 'About' },
+  { to: '/programs', label: 'Programs' },
+  { to: '/products', label: 'Products' },
+];
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Handle scroll effect for navbar
+  // Condense the navbar once the page has scrolled past the hero area
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavLinkClick = () => {
+  // Lock body scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  const closeMobileMenu = () => {
     const navBarCollapse = document.getElementById('navbarNav');
-    if (navBarCollapse.classList.contains('show')) {
+    if (navBarCollapse && navBarCollapse.classList.contains('show') && window.bootstrap) {
       new window.bootstrap.Collapse(navBarCollapse).hide();
-      setMobileMenuOpen(false);
     }
+    setMobileMenuOpen(false);
   };
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
+  const toggleMobileMenu = () => setMobileMenuOpen((open) => !open);
 
   return (
-    <nav className={`navbar navbar-expand-lg ${scrolled ? 'navbar-scrolled' : ''}`}>
+    <nav className={`site-navbar navbar navbar-expand-lg ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container">
-        <NavLink className="navbar-brand" to="/">
-          <img src={logo} alt="Logo" className="nav-logo" />
+        <NavLink className="navbar-brand" to="/" onClick={closeMobileMenu}>
+          <img src={logo} alt="Company logo" className="nav-logo" />
         </NavLink>
-        
-        <button 
+
+        <button
           className={`navbar-toggler ${mobileMenuOpen ? 'active' : ''}`}
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" 
-          aria-expanded="false" 
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded={mobileMenuOpen}
           aria-label="Toggle navigation"
           onClick={toggleMobileMenu}
         >
@@ -55,32 +62,39 @@ const Header = () => {
           <span className="toggler-icon middle-bar"></span>
           <span className="toggler-icon bottom-bar"></span>
         </button>
-        
-        <div className="collapse navbar-collapse" id="navbarNav">
+
+        <div className={`collapse navbar-collapse ${mobileMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
+            {NAV_LINKS.map(({ to, label, exact }) => (
+              <li className="nav-item" key={to}>
+                <NavLink
+                  exact={exact}
+                  to={to}
+                  className="nav-link"
+                  activeClassName="active"
+                  onClick={closeMobileMenu}
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
             <li className="nav-item">
-              <NavLink exact to="/" className="nav-link" activeClassName="active" onClick={handleNavLinkClick}>Home</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/service" className="nav-link" activeClassName="active" onClick={handleNavLinkClick}>Services</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/about" className="nav-link" activeClassName="active" onClick={handleNavLinkClick}>About</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/programs" className="nav-link" activeClassName="active" onClick={handleNavLinkClick}>Programs</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/products" className="nav-link" activeClassName="active" onClick={handleNavLinkClick}>Products</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/contact" className="nav-link contact-link" activeClassName="active" onClick={handleNavLinkClick}>Contact</NavLink>
+              <NavLink
+                to="/contact"
+                className="nav-link contact-link"
+                activeClassName="active"
+                onClick={closeMobileMenu}
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
+
+      {mobileMenuOpen && <div className="nav-backdrop" onClick={closeMobileMenu}></div>}
     </nav>
   );
-}
+};
 
 export default Header;

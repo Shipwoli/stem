@@ -1,0 +1,236 @@
+/* ==========================================================================
+   STEMTRIX — Join / Sign-Up Page
+   Same brand system as the homepage and contact page.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #111111;
+  --ink-soft: #2a2a2a;
+  --paper: #ffffff;
+  --warm-grey: #f6f3ef;
+  --red: #e31e2c;
+  --red-deep: #a8141a;
+  --red-tint: #fdecec;
+  --line: rgba(17, 17, 17, 0.1);
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+}
+
+.sign-page {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  overflow-x: hidden;
+}
+
+.sign-page h1,
+.sign-page h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.sign-page .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.sign-page .eyebrow::before {
+  content: '//';
+  color: var(--ink);
+  opacity: 0.35;
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.sign-hero {
+  position: relative;
+  background: linear-gradient(160deg, #fff 0%, var(--warm-grey) 55%, var(--red-tint) 100%);
+  padding: 7.5rem 0 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sign-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 20%, rgba(227, 30, 44, 0.1), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(255, 171, 0, 0.12), transparent 48%);
+  pointer-events: none;
+}
+
+.sign-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.sign-hero-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.sign-hero-text {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   FORM CARD
+   ========================================================================== */
+.sign-body {
+  padding: 3.5rem 0 6rem;
+  background: var(--paper);
+}
+
+.sign-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: 0 24px 60px rgba(17, 17, 17, 0.08);
+}
+
+/* Tabs */
+.sign-tabs {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--warm-grey);
+  border-radius: 999px;
+  padding: 0.35rem;
+  margin-bottom: 1.75rem;
+}
+
+.sign-tab {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  background: transparent;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sign-tab.active {
+  background: var(--red);
+  color: #fff;
+}
+
+.sign-tab:not(.active):hover {
+  color: var(--ink);
+}
+
+.sign-alert {
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+/* Form fields */
+.sign-form .form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sign-form .label-icon {
+  color: var(--red);
+  font-size: 0.85rem;
+}
+
+.sign-form .form-control {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  background: var(--warm-grey);
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sign-form .form-control:focus {
+  border-color: var(--red);
+  background: #fff;
+  box-shadow: 0 0 0 3px var(--red-tint);
+}
+
+.sign-submit-btn {
+  background: var(--red);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sign-submit-btn:hover:not(:disabled) {
+  background: var(--red-deep);
+  transform: translateY(-1px);
+}
+
+.sign-submit-btn:disabled {
+  opacity: 0.7;
+}
+
+.sign-form-footnote {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  opacity: 0.75;
+  margin: 1rem 0 0;
+}
+
+@media (max-width: 767px) {
+  .sign-hero {
+    padding: 6rem 0 3rem;
+  }
+  .sign-card {
+    padding: 1.5rem;
+  }
+  .sign-tab {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+.sign-page a:focus-visible,
+.sign-page button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}

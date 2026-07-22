@@ -1,139 +1,209 @@
 /* PDFNewsletterPopup.css */
-.pdf-newsletter-modal .modal-content {
-    border: none;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+
+:root {
+  --irc-navy: #0b1120;
+  --irc-navy-light: #141d33;
+  --irc-accent: #ff5a3c;
+  --irc-accent-light: #ff8563;
+  --irc-cyan: #21d4c9;
+  --irc-text-muted: #a3adc2;
+}
+
+/* Modal shell */
+.pdf-newsletter-modal .modal-dialog {
+  max-width: 640px;
+}
+
+.pdf-newsletter-content {
+  border: none !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+/* Popup card */
+.pdf-newsletter-popup {
+  position: relative;
+  background: linear-gradient(160deg, var(--irc-navy) 0%, var(--irc-navy-light) 100%);
+  color: #fff;
+  padding: 32px 32px 24px;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.popup-close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: rotate(90deg);
+}
+
+/* Header */
+.popup-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 90, 60, 0.15);
+  border: 1px solid rgba(255, 90, 60, 0.4);
+  color: var(--irc-accent-light);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--irc-cyan);
+  box-shadow: 0 0 8px var(--irc-cyan);
+}
+
+.popup-header h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.popup-header p {
+  font-size: 14px;
+  color: var(--irc-text-muted);
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* PDF frame */
+.pdf-frame-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  height: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.pdf-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #f4f5f7;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.pdf-loading-spinner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 90, 60, 0.2);
+  border-top-color: var(--irc-accent);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
-  
+}
+
+/* Footer */
+.popup-footer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.download-link {
+  text-decoration: none;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, var(--irc-accent) 0%, #ff7a52 100%) !important;
+  border: none !important;
+  font-weight: 700 !important;
+  padding: 10px 24px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 20px rgba(255, 90, 60, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 90, 60, 0.45);
+}
+
+.close-btn {
+  color: var(--irc-text-muted) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+  background: transparent !important;
+}
+
+.close-btn:hover {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
   .pdf-newsletter-popup {
-    position: relative;
-    padding: 0;
-    background-color: #fff;
+    padding: 24px 20px 20px;
   }
-  
-  .popup-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #777;
-    z-index: 10;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.3s;
+
+  .pdf-frame-wrapper {
+    height: 320px;
   }
-  
-  .popup-close:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-  
-  .popup-header {
-    background: linear-gradient(135deg, #4a90e2, #1e3c72);
-    color: #fff;
-    padding: 25px 30px;
-    text-align: center;
-  }
-  
-  .popup-badge {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
+
   .popup-header h2 {
-    margin-bottom: 10px;
-    font-weight: 700;
+    font-size: 20px;
   }
-  
-  .popup-header p {
-    opacity: 0.9;
-    margin-bottom: 0;
-  }
-  
-  .pdf-preview {
-    padding: 0;
-    height: 450px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .pdf-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-  
+
   .popup-footer {
-    padding: 20px 30px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: column;
   }
-  
-  .download-btn {
-    padding: 10px 20px;
-    font-weight: 600;
-    background: linear-gradient(135deg, #4a90e2, #1e3c72);
-    border: none;
-    transition: transform 0.3s, box-shadow 0.3s;
+
+  .popup-footer .btn {
+    width: 100%;
   }
-  
-  .download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
-  }
-  
-  .download-link {
-    text-decoration: none;
-  }
-  
-  /* Animation for popup appearance */
-  .modal.show .modal-dialog {
-    animation: popupFadeIn 0.4s ease-out forwards;
-  }
-  
-  @keyframes popupFadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px) scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .pdf-preview {
-      height: 350px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .pdf-preview {
-      height: 300px;
-    }
-    
-    .popup-footer {
-      flex-direction: column;
-    }
-    
-    .popup-footer .btn {
-      width: 100%;
-    }
-  }
+}
