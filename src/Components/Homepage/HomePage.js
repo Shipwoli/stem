@@ -20,7 +20,7 @@ import {
   FaLaptopCode,
   FaFlask
 } from 'react-icons/fa';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 import PDFNewsletterPopup from './PDFNewsletterPopup'; // Import the PDF popup component
 import './HomePage.css';
 import kenia66 from './galleryItems/kenia-66.jpg';
@@ -171,7 +171,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>temtrix — Robotics, Coding, AI & STEM Education for Ages 4–17</title>
+        <title>Stemtrix — Robotics, Coding, AI & STEM Education for Ages 4–17</title>
         <meta
          name="description"
   content="Kenya's leading robotics, coding and STEM education provider offering Scratch coding, Python programming, robotics training, AI education, educational robotics kits, computer packages, holiday camps, and STEM solutions for schools and learners aged 4–17."

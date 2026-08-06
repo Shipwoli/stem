@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 import emailjs from 'emailjs-com';
 import './Contact.css';
 import {

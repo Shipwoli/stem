@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Card, Badge } from "react-bootstrap";
-import { Helmet } from "react-helmet";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { Helmet } from "react-helmet-async";
 import roboticsImg from "./assets/ev.jpeg";
 import wedoImg from "./assets/wedo.jpg";
 import codingImg from "./assets/scratch.jpeg";
@@ -10,6 +10,7 @@ import storytellingImg from "./assets/story.jpeg";
 import powerMachineImg from "./assets/power.jpeg";
 import architectureImg from "./assets/design.jpeg";
 import { Link } from "react-router-dom";
+import { FaUsers, FaArrowRight } from "react-icons/fa";
 import "./Program.css";
 
 const programsData = [
@@ -120,46 +121,88 @@ const programsData = [
 ];
 
 // Group programs by category
-const categories = [...new Set(programsData.map(program => program.category))];
+const categories = [...new Set(programsData.map((program) => program.category))];
 
 const Programs = () => {
   const [activeCategory, setActiveCategory] = React.useState("All");
-  
-  const filteredPrograms = activeCategory === "All" 
-    ? programsData 
-    : programsData.filter(program => program.category === activeCategory);
+
+  const filteredPrograms =
+    activeCategory === "All"
+      ? programsData
+      : programsData.filter((program) => program.category === activeCategory);
 
   return (
     <main className="programs-page">
       <Helmet>
-        <title>Our STEM Programs - Hands-on Learning</title>
+        <title>STEM Programs — Robotics, Coding &amp; Engineering for Ages 4–17 | Stemtrix</title>
         <meta
           name="description"
-          content="Explore our range of hands-on STEM programs designed to build creativity, problem-solving, and technical skills in young learners."
+          content="Explore Stemtrix's hands-on STEM programs — robotics, Python and Arduino coding, engineering, and creative storytelling projects — designed for learners aged 4 to 17."
         />
+        <meta
+          name="keywords"
+          content="Stemtrix programs, robotics program Kenya, Python coding for kids, Arduino programming, junior robotics, WeDo 2.0, LEGO Spike Prime, EV3 robotics, engineering for kids, coding classes Kenya, STEM programs Nairobi"
+        />
+        {/* NOTE: replace with your real production domain */}
+        <link rel="canonical" href="https://www.stemtrix.co.ke/programs" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="STEM Programs — Robotics, Coding & Engineering for Ages 4–17 | Stemtrix"
+        />
+        <meta
+          property="og:description"
+          content="Robotics, coding, engineering, and creative programs for learners aged 4 to 17 — explore every Stemtrix program in one place."
+        />
+        <meta property="og:url" content="https://www.stemtrix.co.ke/programs" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Stemtrix STEM Programs",
+            itemListElement: programsData.map((program, index) => ({
+              "@type": "Course",
+              position: index + 1,
+              name: program.title,
+              description: program.description,
+              provider: {
+                "@type": "EducationalOrganization",
+                name: "Stemtrix"
+              }
+            }))
+          })}
+        </script>
       </Helmet>
 
-      {/* Hero Section */}
-      <div className="hero-section text-center py-5 mb-5">
+      {/* Hero */}
+      <header className="programs-hero">
+        <div className="programs-hero-overlay"></div>
         <Container>
-          <h1 className="display-3 fw-bold mb-3">Explore Our STEM Programs</h1>
-          <p className="lead fs-4 mb-4">Inspiring the next generation of innovators through hands-on learning experiences</p>
-          <div className="divider mx-auto mb-4"></div>
+          <div className="programs-hero-inner">
+            <div className="eyebrow justify-content-center">our programs</div>
+            <h1 className="programs-hero-title">Explore Our STEM Programs</h1>
+            <p className="programs-hero-text">
+              Inspiring the next generation of innovators through hands-on robotics, coding, and
+              engineering — with a program for every age from 4 to 17.
+            </p>
+          </div>
         </Container>
-      </div>
+      </header>
 
       {/* Category Filters */}
-      <Container className="mb-5">
-        <div className="category-filters d-flex justify-content-center flex-wrap gap-2">
-          <button 
+      <Container className="programs-filters-wrap">
+        <div className="category-filters">
+          <button
             className={`filter-btn ${activeCategory === "All" ? "active" : ""}`}
             onClick={() => setActiveCategory("All")}
           >
             All Programs
           </button>
-          {categories.map((category, index) => (
-            <button 
-              key={index}
+          {categories.map((category) => (
+            <button
+              key={category}
               className={`filter-btn ${activeCategory === category ? "active" : ""}`}
               onClick={() => setActiveCategory(category)}
             >
@@ -169,40 +212,34 @@ const Programs = () => {
         </div>
       </Container>
 
-      {/* Programs Section */}
-      <section className="programs-section py-5">
+      {/* Programs Grid */}
+      <section className="programs-section">
         <Container>
           <Row className="g-4">
-            {filteredPrograms.map((program, index) => (
-              <Col key={index} md={6} lg={4}>
-                <Card className="h-100 program-card border-0 shadow-sm">
+            {filteredPrograms.map((program) => (
+              <Col key={program.title} md={6} lg={4}>
+                <Card className="h-100 program-card">
                   <div className="card-img-container">
-                    <Card.Img
-                      variant="top"
-                      src={program.img}
-                      alt={program.title}
-                      className="program-img"
-                    />
-                    <Badge bg="primary" className="category-badge">{program.category}</Badge>
+                    <Card.Img variant="top" src={program.img} alt={program.title} className="program-img" />
+                    <span className={`category-badge cat-${program.category.toLowerCase()}`}>
+                      {program.category}
+                    </span>
                   </div>
                   <Card.Body>
-                    <h3 className="card-title mb-2">{program.title}</h3>
+                    <h3 className="card-title">{program.title}</h3>
                     {program.age && (
-                      <p className="age-range mb-3">
-                        <span className="age-icon">👥</span> {program.age}
+                      <p className="age-range">
+                        <FaUsers className="age-icon" /> {program.age}
                       </p>
                     )}
                     <p className="program-description">{program.description}</p>
                     <h4 className="highlights-title">Program Highlights</h4>
                     <ul className="highlights-list">
-                      {program.highlights.map((highlight, i) => (
-                        <li key={i}>{highlight}</li>
+                      {program.highlights.map((highlight) => (
+                        <li key={highlight}>{highlight}</li>
                       ))}
                     </ul>
                   </Card.Body>
-                  {/* <Card.Footer className="bg-white border-0">
-                    <button className="btn btn-primary w-100">Learn More</button>
-                  </Card.Footer> */}
                 </Card>
               </Col>
             ))}
@@ -211,14 +248,26 @@ const Programs = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="cta-section text-center py-5 my-5">
-  <Container>
-    <h2 className="mb-4">Ready to start your STEM journey?</h2>
-    <p className="lead mb-4">Join our innovative programs and discover the exciting world of science, technology, engineering, and mathematics!</p>
-    <Link to="/join-us" className="btn btn-lg btn-primary me-2">Register Now</Link>
-    <Link to="/contact" className="btn btn-lg btn-outline-primary">Contact Us</Link>
-  </Container>
-</section>
+      <section className="programs-cta-section">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+        <Container>
+          <h2>Ready to start your STEM journey?</h2>
+          <p>
+            Join our innovative programs and discover the exciting world of science, technology,
+            engineering, and mathematics!
+          </p>
+          <div className="programs-cta-actions">
+            <Link to="/join-us" className="programs-cta-btn primary">
+              Register Now <FaArrowRight className="ms-2" />
+            </Link>
+            <Link to="/contact" className="programs-cta-btn secondary">
+              Contact Us
+            </Link>
+          </div>
+        </Container>
+      </section>
     </main>
   );
 };
