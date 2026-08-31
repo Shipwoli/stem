@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import {
-  FaWhatsapp,
   FaArrowRight,
   FaRobot,
   FaCode,
@@ -115,7 +114,7 @@ const HomePage = () => {
   // Scrolling gallery — replace `src` with real photos, e.g. '/assets/gallery/robotics-build.jpg'.
   // Until real photos are added, `icon` renders as a placeholder so the strip still looks intentional.
   const galleryItems = [
-   { id: 'g2', src: kenia66, icon: <FaCode />, caption: 'Scratch Coding Class' },
+    { id: 'g1', src: kenia66, icon: <FaCode />, caption: 'Scratch Coding Class' },
     { id: 'g2', src: kenia61, icon: <FaCode />, caption: 'Scratch Coding Class' },
     { id: 'g3', src: kenia62, icon: <FaRobot />, caption: 'Robotics Challenge Prep' },
     { id: 'g4', src: kenia63, icon: <FaLaptopCode />, caption: 'Python & C++ Lab' },
@@ -168,19 +167,127 @@ const HomePage = () => {
     }
   ];
 
+  const newsItems = [
+    {
+      video: 'T-PeDh3SCAo',
+      date: 'March 6–7, 2026',
+      title: 'Inspire Robotics Challenge 2026',
+      excerpt:
+        "Schools from across Kenya gathered at St. Andrew's School, Turi for the 2026 Inspire Robotics Challenge under the theme \"Climate.\" Participants camped overnight, collaborated on innovative robotics challenges, and planted over 300 trees on the second morning, demonstrating their commitment to environmental sustainability while competing for international robotics opportunities.",
+      link: '/news/inspire-robotics-challenge-2026'
+    },
+    {
+      video: 'eV7RRlNloZs',
+      date: 'March 15, 2025',
+      title: 'Inspire Robotics Challenge 2025',
+      excerpt:
+        'Schools came together at Potterhouse Senior School to compete under the theme "Health." Winners will represent Kenya in Beijing, China.',
+      link: '/news/inspire-robotics-challenge-2025'
+    },
+    {
+      video: '8P7GzmF8Xf0',
+      date: 'April 5, 2025',
+      title: 'Robofest at Merishaw School',
+      excerpt:
+        'Seven schools competed in various robotics challenges at Merishaw School, with top teams earning spots at the global event in Michigan.',
+      link: '/news/robofest-merishaw-school'
+    },
+    {
+      video: 'cfNnN_UxdpQ',
+      date: 'February 10, 2025',
+      title: 'Inspire Robotics Champions 2023/2024',
+      excerpt:
+        'Riara Springs Girls High School showcased outstanding innovation and teamwork to claim the championship title.',
+      link: '/news/inspire-robotics-champions-2024'
+    },
+    {
+      video: 'RKgyaGQUqsE',
+      date: 'January 15, 2025',
+      title: '2023-2024 Robotics Season',
+      excerpt:
+        "Exciting new challenges await in this year's robotics competition with innovative problem-solving scenarios.",
+      link: '/news/robotics-season-2023-2024'
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Stemtrix — Robotics, Coding, AI & STEM Education for Ages 4–17</title>
+        <title>Stemtrix — Robotics, Coding, AI &amp; STEM Education Kenya | Ages 4–17</title>
         <meta
-         name="description"
-  content="Kenya's leading robotics, coding and STEM education provider offering Scratch coding, Python programming, robotics training, AI education, educational robotics kits, computer packages, holiday camps, and STEM solutions for schools and learners aged 4–17."
-
+          name="description"
+          content="Kenya's leading robotics, coding and STEM education provider. Scratch coding, Python & C++ programming, robotics training, AI education, robotics kits, holiday camps, and school STEM programs for ages 4–17 in Nairobi."
         />
-      <meta
-  name="keywords"
-  content="Stemtrix, Stemtrix East Africa, robotics Kenya, robotics for kids Kenya, robotics classes Nairobi, robotics training Kenya, coding academy Kenya, coding for kids Kenya, ScratchJr, Scratch programming, Scratch coding, Python programming, Python for kids, C++ programming, Java programming, JavaScript, HTML, CSS, Web Development, Game Development, Artificial Intelligence, AI for kids, Machine Learning, Prompt Engineering, STEM education, STEAM education, STEM academy Kenya, engineering for kids, electronics for kids, computational thinking, coding bootcamp, robotics clubs, coding clubs, holiday robotics camp, holiday coding camp, holiday STEM camp, after school robotics, after school coding, school STEM programs, CBC STEM, Cambridge STEM, teacher STEM training, robotics competitions Kenya, coding competitions, Inspire Robotics Challenge, Inspire Robotics Challenge Kenya, Inspire Robotics Challenge Africa, RobotChallenge, World Robot Olympiad, FIRST LEGO League, LEGO Education, LEGO WeDo 2.0, LEGO Spike Essential, LEGO Spike Prime, LEGO Mindstorms EV3, EV3 Robotics, Arduino, Micro:bit, SmartBlox, Nezha, robotics kits, educational robotics kits, STEM kits, computer packages, ICT solutions for schools, educational technology, robotics workshops, coding workshops, AI workshops, technology education, innovation, future skills, 21st century skills, learn robotics, learn coding, robotics academy, coding academy, AI education, schools in Kenya, Nairobi robotics, Kenya coding academy, Stemtrix competitions, Stemtrix robotics, Stemtrix coding, Stemtrix AI, Stemtrix holiday camp"
-/>
+        <meta
+          name="keywords"
+          content="Stemtrix, Stemtrix East Africa, robotics Kenya, robotics for kids Kenya, robotics classes Nairobi, robotics training Kenya, coding academy Kenya, coding for kids Kenya, Scratch programming, Python programming, C++ programming, HTML CSS, Web Development, Artificial Intelligence, AI for kids, Machine Learning, STEM education, STEAM education, STEM academy Kenya, engineering for kids, electronics for kids, computational thinking, robotics clubs, coding clubs, holiday robotics camp, holiday coding camp, after school robotics, school STEM programs, robotics competitions Kenya, Inspire Robotics Challenge, RobotChallenge, World Robot Olympiad, FIRST LEGO League, LEGO Education, LEGO WeDo 2.0, LEGO Spike Prime, EV3 Robotics, Arduino, Micro:bit, robotics kits, STEM kits, robotics academy, coding academy, AI education, Nairobi robotics, Kenya coding academy"
+        />
+        <meta name="author" content="Stemtrix" />
+        <meta name="robots" content="index, follow" />
+        {/* NOTE: replace with your real production domain */}
+        <link rel="canonical" href="https://www.stemtrix.co.ke/" />
+
+        {/* Open Graph */}
+        <meta property="og:site_name" content="Stemtrix" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Stemtrix — Robotics, Coding, AI & STEM Education Kenya" />
+        <meta
+          property="og:description"
+          content="Hands-on robotics, coding, and AI education for ages 4–17. Robotics tournaments, holiday camps, school programs, and robotics kits — Nairobi, Kenya."
+        />
+        {/* NOTE: needs to be an absolute, hosted URL once deployed */}
+        <meta property="og:image" content="https://www.stemtrix.co.ke/og-image.jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://www.stemtrix.co.ke/" />
+        <meta property="og:locale" content="en_KE" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Stemtrix — Robotics, Coding, AI & STEM Education Kenya" />
+        <meta
+          name="twitter:description"
+          content="Hands-on robotics, coding, and AI education for ages 4–17 in Nairobi, Kenya."
+        />
+        <meta name="twitter:image" content="https://www.stemtrix.co.ke/og-image.jpeg" />
+
+        {/* Structured data: who we are + what we teach, for rich results */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: "Stemtrix",
+            alternateName: "Stemtrix East Africa",
+            url: "https://www.stemtrix.co.ke/",
+            logo: "https://www.stemtrix.co.ke/logo192.png",
+            foundingDate: "2017",
+            description:
+              "Stemtrix provides robotics, coding, and STEM education for learners aged 4-17 across East Africa, including tournaments, after-school training, holiday camps, and school partnerships.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Kabarnet Road, off Ngong Road",
+              addressLocality: "Nairobi",
+              addressCountry: "KE"
+            },
+            telephone: "+254728128353",
+            email: "stemtrix@gmail.com",
+            sameAs: []
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Stemtrix Programs",
+            itemListElement: programs.map((program, index) => ({
+              "@type": "Course",
+              position: index + 1,
+              name: program.title,
+              description: program.text,
+              provider: { "@type": "EducationalOrganization", name: "Stemtrix" }
+            }))
+          })}
+        </script>
       </Helmet>
       <PDFNewsletterPopup />
 
@@ -213,12 +320,14 @@ const HomePage = () => {
                   Empowering the Next Generation of <em>Innovators</em>
                 </h1>
                 <p className="hero-text">
-               Empowering learners aged 4–17 with hands-on Robotics, Scratch Coding, Python Programming, Artificial Intelligence, and STEM education, building the creativity, confidence, and technical skills needed for tomorrow's world.
+                  Empowering learners aged 4–17 with hands-on Robotics, Scratch Coding, Python
+                  Programming, Artificial Intelligence, and STEM education, building the
+                  creativity, confidence, and technical skills needed for tomorrow's world.
                 </p>
                 <div className="hero-track-labels">
                   <span className="hero-track-chip"><strong>4–9</strong> WeDo &amp; Scratch</span>
                   <span className="hero-track-chip"><strong>10–13</strong> Robotics &amp; Coding</span>
-                  <span className="hero-track-chip"><strong>14–17</strong> Advance Robtics &amp; Coding</span>
+                  <span className="hero-track-chip"><strong>14–17</strong> Advanced Robotics &amp; Coding</span>
                 </div>
                 <div className="cta-buttons">
                   <Link to="/programs">
@@ -240,7 +349,7 @@ const HomePage = () => {
                       <FaBrain className="icon" />
                       <div>
                         <span className="age">Ages 14–17</span>
-                        <span className="label">Advance Robtics &amp; Coding</span>
+                        <span className="label">Advanced Robotics &amp; Coding</span>
                       </div>
                     </div>
                     <div className="hero-growth-card stage-2">
@@ -275,7 +384,9 @@ const HomePage = () => {
                   </span>
                   <h2 className="camp-banner-title">Holiday Robotics and Coding Camp is Here!</h2>
                   <p className="camp-banner-text">
-                  This holiday, your child will explore robotics and coding, including Python programming, by building and programming real robots at STEMTRIX — gaining hands-on STEM skills in a fun, safe, and inspiring environment.
+                    This holiday, your child will explore robotics and coding, including Python
+                    programming, by building and programming real robots at STEMTRIX — gaining
+                    hands-on STEM skills in a fun, safe, and inspiring environment.
                   </p>
                   <div className="camp-banner-details">
                     <span className="camp-detail"><FaCalendarAlt /> This holiday season</span>
@@ -305,64 +416,63 @@ const HomePage = () => {
           <Container>
             <div className="section-header centered mx-auto text-center mb-5">
               <div className="eyebrow justify-content-center">why stemtrix</div>
-              <h2 className="section-title">Four Disciplines, One Journey</h2>
+              <h2 className="section-title">Five Disciplines, One Journey</h2>
               <p className="section-subtitle">
-             At Stemtrix, Robotics, Coding, Artificial Intelligence, and STEM education work together to help learners explore, create, innovate, and prepare for the future.
+                At Stemtrix, Robotics, Coding, Artificial Intelligence, and STEM education work
+                together to help learners explore, create, innovate, and prepare for the future.
               </p>
             </div>
             <Row className="g-4">
               <Col md={6} lg={3}>
                 <div className="pillar-card">
-                <div className="pillar-icon"><FaRobot /></div>
-<h3>Robotics</h3>
-<p>
-  Design, build, and program robots using LEGO Education, Arduino, Micro:bit, and other industry-leading robotics platforms through exciting, hands-on STEM projects.
-</p>
-</div>
+                  <div className="pillar-icon"><FaRobot /></div>
+                  <h3>Robotics</h3>
+                  <p>
+                    Design, build, and program robots using LEGO Education, Arduino, Micro:bit,
+                    and other industry-leading robotics platforms through exciting, hands-on STEM
+                    projects.
+                  </p>
+                </div>
               </Col>
               <Col md={6} lg={3}>
                 <div className="pillar-card">
                   <div className="pillar-icon"><FaCode /></div>
                   <h3>Coding</h3>
-<p>
-  Learn coding through Scratch, Python, web development, and other programming technologies while building games, apps, and real-world digital solutions.
-</p>
+                  <p>
+                    Learn coding through Scratch, Python, web development, and other programming
+                    technologies while building games, apps, and real-world digital solutions.
+                  </p>
                 </div>
               </Col>
-
-
-<Col md={6} lg={3}>
-                <div className="pillar-card">
-                  <div className="pillar-icon"><FaCode /></div>
-<h3>STEM Solutions</h3>
-<p>
-  We supply educational robotics kits, computer packages, and STEM equipment to schools, organizations, and learning institutions across East Africa.
-</p>
-                </div>
-              </Col>
-
-
-
-
               <Col md={6} lg={3}>
                 <div className="pillar-card">
- <div className="pillar-icon"><FaTrophy /></div>
-<h3>Competitions</h3>
-<p>
-  Challenge your skills in local and international robotics competitions, showcasing innovation, teamwork, and technical excellence.
-</p>       </div>
+                  <div className="pillar-icon"><FaTools /></div>
+                  <h3>STEM Solutions</h3>
+                  <p>
+                    We supply educational robotics kits, computer packages, and STEM equipment to
+                    schools, organizations, and learning institutions across East Africa.
+                  </p>
+                </div>
+              </Col>
+              <Col md={6} lg={3}>
+                <div className="pillar-card">
+                  <div className="pillar-icon"><FaTrophy /></div>
+                  <h3>Competitions</h3>
+                  <p>
+                    Challenge your skills in local and international robotics competitions,
+                    showcasing innovation, teamwork, and technical excellence.
+                  </p>
+                </div>
               </Col>
               <Col md={6} lg={3}>
                 <div className="pillar-card">
                   <div className="pillar-icon"><FaGraduationCap /></div>
-             <h3>STEM Education</h3>
-<p>
-  Develop creativity, critical thinking, engineering, and problem-solving skills through engaging, project-based STEM learning experiences.
-</p>
-
+                  <h3>STEM Education</h3>
+                  <p>
+                    Develop creativity, critical thinking, engineering, and problem-solving skills
+                    through engaging, project-based STEM learning experiences.
+                  </p>
                 </div>
-
-                
               </Col>
             </Row>
           </Container>
@@ -409,7 +519,34 @@ const HomePage = () => {
           </Container>
         </section>
 
-      
+        {/* Programs Grid */}
+        <section className="programs-section">
+          <Container>
+            <div className="section-header centered mx-auto text-center mb-5">
+              <div className="eyebrow justify-content-center">what we offer</div>
+              <h2 className="section-title">Programs Built Around Every Learner</h2>
+              <p className="section-subtitle">
+                Six programs, one philosophy: building future innovators through robotics, coding, and AI.
+              </p>
+            </div>
+            <Row className="g-4">
+              {programs.map((program) => (
+                <Col key={program.title} md={6} lg={4}>
+                  <div className={`program-card ${program.flagship ? 'is-flagship' : ''}`}>
+                    {program.tag && <span className="program-tag">{program.tag}</span>}
+                    <div className="program-icon">{program.icon}</div>
+                    <h3>{program.title}</h3>
+                    <p>{program.text}</p>
+                    <Link to={program.link} className="program-link">
+                      Learn more <FaArrowRight />
+                    </Link>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </section>
+
         {/* Testimonials Section */}
         <section className="testimonials-section">
           <Container>
@@ -445,142 +582,30 @@ const HomePage = () => {
               </p>
             </div>
             <Row className="g-4">
- {/* Inspire Robotics Challenge 2026 */}
-              <Col xs={12} md={6} lg={3}>
-                <article className="news-card h-100">
-                  
-                  <div className="news-card-media">
-                    <div className="video-container">
-                      <iframe
-                        className="video-frame"
-                        src="https://www.youtube.com/embed/T-PeDh3SCAo"
-                        title="Inspire Robotics Challenge 2025"
-                        allowFullScreen
-                      ></iframe>
+              {newsItems.map((item) => (
+                <Col xs={12} md={6} lg={3} key={item.link}>
+                  <article className="news-card h-100">
+                    <div className="news-card-media">
+                      <div className="video-container">
+                        <iframe
+                          className="video-frame"
+                          src={`https://www.youtube.com/embed/${item.video}`}
+                          title={item.title}
+                          allowFullScreen
+                        ></iframe>
+                      </div>
                     </div>
-                  </div>
-                  <div className="news-card-content">
-                    <div className="news-date">March 6&7, 2026</div>
-                    <h3 className="news-title">Inspire Robotics Challenge 2026</h3>
-                    <p className="news-excerpt">
-                        Schools from across Kenya gathered at St. Andrew's School, Turi for the 2026 Inspire Robotics Challenge under the theme <strong>"Climate."</strong> Participants camped overnight, collaborated on innovative robotics challenges, and planted over <strong>300 trees</strong> on the second morning, demonstrating their commitment to environmental sustainability while competing for international robotics opportunities.
-
-                    </p>
-                    <Link to="/news/inspire-robotics-challenge-2025" className="news-link">
-                      Read more <FaArrowRight className="ms-1" />
-                    </Link>
-                  </div>
-                </article>
-              </Col>
-
-              {/* Inspire Robotics Challenge 2025 */}
-              <Col xs={12} md={6} lg={3}>
-                <article className="news-card h-100">
-                  
-                  <div className="news-card-media">
-                    <div className="video-container">
-                      <iframe
-                        className="video-frame"
-                        src="https://www.youtube.com/embed/eV7RRlNloZs"
-                        title="Inspire Robotics Challenge 2025"
-                        allowFullScreen
-                      ></iframe>
+                    <div className="news-card-content">
+                      <div className="news-date">{item.date}</div>
+                      <h3 className="news-title">{item.title}</h3>
+                      <p className="news-excerpt">{item.excerpt}</p>
+                      <Link to={item.link} className="news-link">
+                        Read more <FaArrowRight className="ms-1" />
+                      </Link>
                     </div>
-                  </div>
-                  <div className="news-card-content">
-                    <div className="news-date">March 15, 2025</div>
-                    <h3 className="news-title">Inspire Robotics Challenge 2025</h3>
-                    <p className="news-excerpt">
-                      Schools came together at Potterhouse Senior School to compete under the theme
-                      "Health." Winners will represent Kenya in Beijing, China.
-                    </p>
-                    <Link to="/news/inspire-robotics-challenge-2025" className="news-link">
-                      Read more <FaArrowRight className="ms-1" />
-                    </Link>
-                  </div>
-                </article>
-              </Col>
-
-              {/* Robofest at Merishaw School */}
-              <Col xs={12} md={6} lg={3}>
-                <article className="news-card h-100">
-                  <div className="news-card-media">
-                    <div className="video-container">
-                      <iframe
-                        className="video-frame"
-                        src="https://www.youtube.com/embed/8P7GzmF8Xf0"
-                        title="Robofest at Merishaw School"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  </div>
-                  <div className="news-card-content">
-                    <div className="news-date">April 5, 2025</div>
-                    <h3 className="news-title">Robofest at Merishaw School</h3>
-                    <p className="news-excerpt">
-                      Seven schools competed in various robotics challenges at Merishaw School, with
-                      top teams earning spots at the global event in Michigan.
-                    </p>
-                    <Link to="/news/robofest-merishaw-school" className="news-link">
-                      Read more <FaArrowRight className="ms-1" />
-                    </Link>
-                  </div>
-                </article>
-              </Col>
-
-              {/* Winners of the Inspire Robotics Challenge */}
-              <Col xs={12} md={6} lg={3}>
-                <article className="news-card h-100">
-                  <div className="news-card-media">
-                    <div className="video-container">
-                      <iframe
-                        className="video-frame"
-                        src="https://www.youtube.com/embed/cfNnN_UxdpQ"
-                        title="Winners of the Inspire Robotics Challenge 2023/2024"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  </div>
-                  <div className="news-card-content">
-                    <div className="news-date">February 10, 2025</div>
-                    <h3 className="news-title">Inspire Robotics Champions 2023/2024</h3>
-                    <p className="news-excerpt">
-                      Riara Springs Girls High School showcased outstanding innovation and teamwork
-                      to claim the championship title.
-                    </p>
-                    <Link to="/news/inspire-robotics-champions-2024" className="news-link">
-                      Read more <FaArrowRight className="ms-1" />
-                    </Link>
-                  </div>
-                </article>
-              </Col>
-
-              {/* 2023-2024 Robotics Season */}
-              <Col xs={12} md={6} lg={3}>
-                <article className="news-card h-100">
-                  <div className="news-card-media">
-                    <div className="video-container">
-                      <iframe
-                        className="video-frame"
-                        src="https://www.youtube.com/embed/RKgyaGQUqsE"
-                        title="2023-2024 Robotics Season"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  </div>
-                  <div className="news-card-content">
-                    <div className="news-date">January 15, 2025</div>
-                    <h3 className="news-title">2023-2024 Robotics Season</h3>
-                    <p className="news-excerpt">
-                      Exciting new challenges await in this year's robotics competition with
-                      innovative problem-solving scenarios.
-                    </p>
-                    <Link to="/news/robotics-season-2023-2024" className="news-link">
-                      Read more <FaArrowRight className="ms-1" />
-                    </Link>
-                  </div>
-                </article>
-              </Col>
+                  </article>
+                </Col>
+              ))}
             </Row>
           </Container>
         </section>
@@ -614,20 +639,6 @@ const HomePage = () => {
             </Row>
           </Container>
         </section>
-
-        {/* WhatsApp Button */}
-        <div className={`whatsapp-button ${isVisible ? 'visible' : ''}`}>
-          <a
-            href="https://wa.me/+254728128353?text=Hello!%20I%20found%20your%20contact%20on%20the%20Stemtrix%20website%20and%20would%20like%20to%20learn%20more%20about%20your%20services."
-            className="whatsapp-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chat with us on WhatsApp"
-          >
-            <FaWhatsapp size={26} />
-            <span className="whatsapp-label">Chat with us</span>
-          </a>
-        </div>
       </main>
     </>
   );

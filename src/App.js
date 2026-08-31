@@ -16,7 +16,10 @@ import MobileRoboticsLab from "./Components/pages/Mobilerobotics";
 import RoboticsTournament from "./Components/pages/Tournament";
 import Services from "./Components/Services/Service";
 import Sign from "./Components/pages/SIgin/Sign";
-
+import WhatsAppButton from "./Components/pages/whatsapp"; // Import the WhatsAppButton component
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import './App.css'; // Import the CSS file for styling
+import ArticleWorldBeater2026 from "./Components/pages/Article/ArticleWorldBeater2026";
 
 function App() {
   return (
@@ -35,12 +38,12 @@ function App() {
         <Route path="/robotics-tournament" element={<RoboticsTournament />} />
         <Route path="/service" element={<Services />} />
         <Route path="/join-us" element={<Sign/>} />
-      
+        <Route path="/article-world-beater-2026" element={<ArticleWorldBeater2026 />} />
 
       </Routes>
       </main>
       <Footer/> {/* Add the Footer component here */}
-
+ <WhatsAppButton />  {/* ← renders on every page, once */}
     </Router>
   );
 }

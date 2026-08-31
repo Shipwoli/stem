@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Helmet } from "react-helmet-async";
 import { motion } from 'framer-motion';
+import { FaArrowRight } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
@@ -17,19 +18,23 @@ const About = () => {
     { year: "Oct 2024", event: "Hosted the 'Back to Basics' Robotics Tournament at Brookhouse School, Karen. International Schools of Kenya and Children's Garden School emerged victorious." },
     { year: "Jan 2025", event: "Brookhouse School represented Team Kenya at the International Robot Olympiad in Busan, Korea." },
     { year: "Feb 2025", event: "Organized the Robofest Tournament at Merishaw School, qualifying teams to represent Kenya at the Robofest International Robotics Tournament in Michigan, USA." },
+    { year: "Aug 2025", event: "Students who won at the Inspire Robotics Challenge represented Kenya at RobotChallenge 2025 in Beijing, China." },
+    { year: "Mar 2026", event: "Hosted Inspire Robotics Challenge 2026 at St Andrew's School, Turi, under the theme 'Climate' — students planted trees on the school grounds and camped overnight under a tent with a bonfire." },
+    { year: "Mar 2026", event: "Held the Inspire Robotics Challenge (IRC) Nairobi edition at Premier Academy." },
+    { year: "Aug 2026", event: "Students from partner schools represented Kenya at RobotChallenge 2026 in Beijing, China, under the theme 'Ocean.'" },
   ];
 
   const values = [
     {
       title: "Our Vision",
-      subtitle: "Inspiring the Innovators of Tomorrow",
-      text: "We aim to ignite curiosity and creativity in every child, empowering them to become future leaders in technology and innovation. Our goal is to make STEM education accessible, enjoyable, and impactful, fostering a lifelong passion for learning.",
+      subtitle: "",
+      text: "To be Africa's leading innovation ecosystem that develops world-class innovators, engineers, entrepreneurs and leaders from childhood.",
       accent: "red"
     },
     {
       title: "Our Mission",
-      subtitle: "Empowering Through Education",
-      text: "We provide high-quality robotics and coding education that nurtures creativity, problem-solving, and critical thinking. Our platform enables children to confidently explore technology, build innovative projects, and develop skills that will benefit them in their future careers.",
+      subtitle: "",
+      text: "To empower young people through robotics, artificial intelligence, coding, engineering, research and entrepreneurship, equipping them with the skills and mindset to solve real-world challenges.",
       accent: "gold"
     },
     {
@@ -37,6 +42,34 @@ const About = () => {
       subtitle: "Cultivating Future Technologists",
       text: "We engage students in hands-on robotics and STEM activities that enhance their research, problem-solving, and teamwork skills. Through project-based learning, we prepare students to tackle real-world challenges and excel in a technology-driven world.",
       accent: "ink"
+    }
+  ];
+
+  const innovationJourney = [
+    {
+      stage: "Discover",
+      age: "4–6",
+      focus: "Explore, play and discover through fun, creative and hands-on STEM activities that spark curiosity."
+    },
+    {
+      stage: "Explore",
+      age: "7–9",
+      focus: "Build foundational skills in robotics, coding and problem solving through exciting projects."
+    },
+    {
+      stage: "Challenge",
+      age: "10–12",
+      focus: "Apply STEM concepts to design, build and programme smart solutions to real-world problems."
+    },
+    {
+      stage: "Innovate",
+      age: "13–15",
+      focus: "Go deeper into AI, robotics, engineering, leadership and entrepreneurship; innovate with purpose."
+    },
+    {
+      stage: "Launch",
+      age: "16–18",
+      focus: "Advanced innovation, startup incubation, university pathways and global opportunities."
     }
   ];
 
@@ -49,7 +82,9 @@ const About = () => {
     "International School of Kenya",
     "Children's Garden",
     "Merishaw School",
-    "Potterhouse Senior School"
+    "Potterhouse Senior School",
+    "St Andrew's School, Turi",
+    "Premier Academy"
   ];
 
   return (
@@ -83,7 +118,7 @@ const About = () => {
             foundingDate: "2017",
             url: "https://www.stemtrix.co.ke/about",
             description:
-              "Stemtrix provides robotics, coding, and STEM education for learners aged 4-17 across East Africa, including tournaments, after-school training, and school partnerships.",
+              "Stemtrix provides robotics, coding, and STEM education for learners aged 4-18 across East Africa, including tournaments, after-school training, and school partnerships.",
             address: {
               "@type": "PostalAddress",
               streetAddress: "Kabarnet Road, off Ngong Road",
@@ -178,13 +213,95 @@ const About = () => {
                 >
                   <div className={`value-box accent-${item.accent}`}>
                     <h3>{item.title}</h3>
-                    <h4>{item.subtitle}</h4>
+                    {item.subtitle && <h4>{item.subtitle}</h4>}
                     <p>{item.text}</p>
                   </div>
                 </motion.div>
               </Col>
             ))}
           </Row>
+        </Container>
+      </section>
+
+      {/* Educational Philosophy */}
+      <section className="philosophy-section">
+        <Container>
+          <Row className="align-items-center g-5">
+            <Col lg={5}>
+              <div className="eyebrow justify-content-start">how we teach</div>
+              <h2>Our Educational Philosophy</h2>
+            </Col>
+            <Col lg={7}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="philosophy-flow">
+                  <span className="philosophy-step">Knowing</span>
+                  <FaArrowRight className="philosophy-arrow" />
+                  <span className="philosophy-step">Thinking</span>
+                  <FaArrowRight className="philosophy-arrow" />
+                  <span className="philosophy-step">Doing</span>
+                </div>
+
+                <p className="philosophy-text">
+                  Stemtrix complements academic learning by giving students opportunities to apply
+                  knowledge. Students build, test, observe, ask why, modify designs and test again.
+                  The goal is not merely to make a robot work; it is to develop the thinking behind
+                  the solution.
+                </p>
+
+                <div className="philosophy-formula">
+                  <span>Knowledge</span>
+                  <span className="plus">+</span>
+                  <span>Application</span>
+                  <span className="plus">+</span>
+                  <span>Reflection</span>
+                  <span className="plus">+</span>
+                  <span>Innovation</span>
+                </div>
+              </motion.div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* 4-18 Year Innovation Journey */}
+      <section className="innovation-journey-section">
+        <Container>
+          <div className="section-header">
+            <div className="eyebrow justify-content-center">how learners grow with us</div>
+            <h2>Our 4–18 Year Innovation Journey</h2>
+          </div>
+
+          <div className="journey-table-wrap">
+            <table className="journey-table">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Age</th>
+                  <th>Development Focus</th>
+                </tr>
+              </thead>
+              <tbody>
+                {innovationJourney.map((row, index) => (
+                  <motion.tr
+                    key={row.stage}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.08 }}
+                  >
+                    <td className="journey-stage-cell">{row.stage}</td>
+                    <td className="journey-age-cell">{row.age}</td>
+                    <td>{row.focus}</td>
+                  </motion.tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </Container>
       </section>
 

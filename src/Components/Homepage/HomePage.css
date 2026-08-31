@@ -7,7 +7,9 @@
    a nod to the subject matter, not decoration.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+/* Fonts are loaded once in index.html via <link> + preconnect for
+   performance — no @import here to avoid a duplicate, render-blocking
+   font request on every page. */
 
 :root {
   --ink: #111111;
@@ -36,6 +38,21 @@
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.home ::selection {
+  background: var(--red);
+  color: #fff;
 }
 
 .home {
@@ -1042,63 +1059,6 @@
 }
 
 /* ==========================================================================
-   WHATSAPP BUTTON
-   ========================================================================== */
-.whatsapp-button {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 999;
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.whatsapp-button.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.whatsapp-link {
-  height: 54px;
-  border-radius: 999px;
-  background: #25d366;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0 1.25rem;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.whatsapp-link:hover {
-  transform: scale(1.04);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
-  color: #fff;
-}
-
-.whatsapp-label {
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #fff;
-  white-space: nowrap;
-}
-
-@media (max-width: 480px) {
-  .whatsapp-label {
-    display: none;
-  }
-  .whatsapp-link {
-    width: 54px;
-    padding: 0;
-    justify-content: center;
-    border-radius: 50%;
-  }
-}
-
-/* ==========================================================================
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 991px) {
@@ -1121,10 +1081,6 @@
     margin-bottom: 0.75rem;
     justify-content: center;
     display: flex;
-  }
-  .whatsapp-button {
-    bottom: 16px;
-    right: 16px;
   }
 }
 

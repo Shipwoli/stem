@@ -75,7 +75,7 @@ const Footer = () => {
             </div>
             <div className="contact-info mt-3">
               <p><strong>Email:</strong> <a href="mailto:stemtrix@gmail.com">stemtrix@gmail.com</a></p>
-              <p><strong>Phone:</strong> <a href="tel:+245728128353">+254728128353</a></p>
+              <p><strong>Phone:</strong> <a href="tel:+254110394940">+254 11 039 4940</a></p>
             </div>
           </Col>
         </Row>

@@ -123,7 +123,7 @@ const Contact = () => {
                 <FaEnvelope /> stemtrix@gmail.com
               </a>
               <a
-                href="https://wa.me/+254728128353"
+                href="https://wa.me/+254110394940?text=Hello!%20I%20found%20your%20contact%20on%20the%20Stemtrix%20website%20and%20would%20like%20to%20learn%20more%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-quick-chip whatsapp"
@@ -159,7 +159,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h5>Phone</h5>
-                    <p>+254 728 128353</p>
+                    <p>+254 11 039 4940</p>
                   </div>
                 </div>
 

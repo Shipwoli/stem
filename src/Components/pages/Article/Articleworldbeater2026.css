@@ -1,0 +1,342 @@
+/* ==========================================================================
+   STEMTRIX — News Article: World Beater 2026
+   Leans into the newsletter's own black/red/white magazine aesthetic,
+   which already matches the Stemtrix brand palette.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #0d0d0d;
+  --ink-soft: #2a2a2a;
+  --paper: #ffffff;
+  --warm-grey: #f6f3ef;
+  --red: #e31e2c;
+  --red-deep: #a8141a;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-dark: rgba(17, 17, 17, 0.1);
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+.article-page {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+.article-page h1,
+.article-page h2,
+.article-page h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+
+.article-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.article-kicker.small {
+  margin-bottom: 0.6rem;
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.article-hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.article-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.article-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.article-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 4rem;
+  color: #fff;
+}
+
+.article-hero .article-kicker {
+  color: #ff6b6f;
+  font-size: 0.85rem;
+}
+
+.article-hero-title {
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
+  line-height: 0.92;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.article-hero-title .accent {
+  color: var(--red);
+}
+
+.article-hero-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.article-hero-teasers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 720px;
+}
+
+.article-hero-teasers .divider {
+  color: var(--red);
+}
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+.article-section {
+  padding: 5rem 0;
+  background: var(--paper);
+}
+
+.article-section.alt {
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.article-section.alt .article-h2 {
+  color: #fff;
+}
+
+.article-h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.article-lede {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.article-section.alt .article-lede {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.article-body-columns p,
+.article-quad-columns p {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.article-section.alt .article-body-columns p,
+.article-section.alt .article-quad-columns p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.article-quad-columns p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   FIGURES
+   ========================================================================== */
+.article-figure {
+  margin: 0 0 3rem;
+}
+
+.article-figure img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.article-figure.tall img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  opacity: 0.7;
+  margin-top: 0.7rem;
+}
+
+.article-section.alt .article-figure figcaption {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.article-caption-text {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-top: 1rem;
+}
+
+/* ==========================================================================
+   PULL QUOTES
+   ========================================================================== */
+.article-quote-section {
+  background: var(--ink);
+  padding: 4rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.article-quote-section blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  line-height: 1.4;
+  color: #fff;
+  max-width: 900px;
+  margin: 0 0 1.25rem;
+}
+
+.article-quote-section cite {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--red);
+}
+
+/* ==========================================================================
+   COACH PROFILES
+   ========================================================================== */
+.coach-profile {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.coach-profile img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--line-dark);
+}
+
+.coach-profile h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.coach-profile p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ==========================================================================
+   INSPIRE ROBOTICS CHALLENGE 2027
+   ========================================================================== */
+.irc-section .article-kicker.small {
+  color: var(--red);
+}
+
+.irc-title {
+  color: #fff;
+}
+
+.irc-detail-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.irc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+}
+
+.article-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.article-cta-btn:hover {
+  background: var(--red-deep);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 767px) {
+  .article-hero {
+    min-height: 80vh;
+  }
+  .article-section,
+  .article-quote-section {
+    padding: 3rem 0;
+  }
+  .coach-profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.article-page a:focus-visible,
+.article-page button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}

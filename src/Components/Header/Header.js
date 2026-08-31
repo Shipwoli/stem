@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { to: '/about', label: 'About' },
   { to: '/programs', label: 'Programs' },
   { to: '/products', label: 'Products' },
+  { to: '/article-world-beater-2026', label: 'Article' },
 ];
 
 const Header = () => {
